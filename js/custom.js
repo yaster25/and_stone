@@ -42,10 +42,17 @@ $(document).ready(function(){
 	});
     
     $('.main-wrapper__before').on('click', function(event) {
-        console.log('1');
-        $('body').removeClass('menu-open');
-        $('.header__nav').removeClass('active') ;
-        $('.mobile-trigger').removeClass('is-active');
+        if($('body').hasClass('menu-open')){
+            $('body').removeClass('menu-open');
+            $('.header__nav').removeClass('active') ;
+            $('.mobile-trigger').removeClass('is-active');
+        }
+        
+        if($('body').hasClass('body-filter-sort-open')){
+            $('body').removeClass('body-filter-sort-open');
+            $('.filter-sort-mobile').removeClass('active') ;
+        }
+        
         event.stopPropagation();
     })
     
@@ -120,16 +127,7 @@ $(document).ready(function(){
                     variableWidth:true,
                     centerMode:false,
                 }
-            },
-             /*
-             {
-                breakpoint: 480,
-                settings: {
-                    //slidesToShow: 1,
-                    //variableWidth:false,
-                    //centerMode:false,
-                }
-            }*/
+            }
         ]
     });
     
@@ -139,7 +137,6 @@ $(document).ready(function(){
     
     
      $('.advantages-more__list-item span').on('mouseenter', function(event) {  
-         console.log($(this).parents('.advantages-more__list-item').attr('data-id'));
         $(this).parents('.advantages-more__list').find('.advantages-more__list-item').removeClass('active');
         $(this).parents('.advantages-more__list-item').addClass('active');
         $(this).parents('.advantages-more').find('.advantages-more__image').find('img').removeClass('active');
@@ -188,18 +185,28 @@ $(document).ready(function(){
     
     
     $(".filter-sort-select__title").click(function(){ 
-        if(!$(this).hasClass('active')){
-            $(".filter-sort-select__title").removeClass('active');
-            $('.filter-sort-select__content').slideUp(100);     
-            $(this).addClass('active');     
-            $(this).next('.filter-sort-select__content').slideDown(100);     
+        
+        if($(window).innerWidth()>991){
+            if(!$(this).hasClass('active')){
+                $(".filter-sort-select__title").removeClass('active');
+                $('.filter-sort-select__content').slideUp(100);     
+                $(this).addClass('active');     
+                $(this).next('.filter-sort-select__content').slideDown(100);     
+            }else{
+                $(".filter-sort-select__title").removeClass('active');
+                $('.filter-sort-select__content').slideUp(100);   
+            }
         }else{
-            $(".filter-sort-select__title").removeClass('active');
-            $('.filter-sort-select__content').slideUp(100);
-           // $(this).removeClass('active');     
-            //$(this).next('.filter-sort-select__content').slideUp(100);     
+            if($(this).parents('.filter-sort').hasClass('filter-sort_currency')){    
+                $('.filter-sort-mobile_currency').addClass('active');     
+                $('body').addClass('body-filter-sort-open');
+            }
+            if($(this).parents('.filter-sort').hasClass('filter-sort_sort')){    
+                $('.filter-sort-mobile_sort').addClass('active');     
+                $('body').addClass('body-filter-sort-open');
+            }
+
         }
-       
         return false;
     });
      
@@ -212,22 +219,26 @@ $(document).ready(function(){
     
     
     $(".js-filter-item-open").click(function(){ 
-        if(!$(this).parents('.filter-item').hasClass('active')){
-            
-            $('.filter-item').removeClass('active');
-            $('.filter-item__content').slideUp(100);            
-            
-            $(this).parents('.filter-item').addClass('active');     
-            $(this).parents('.filter-item').find('.filter-item__content').slideDown(100);     
+        
+        if($(window).innerWidth()>991){
+            if(!$(this).parents('.filter-item').hasClass('active')){            
+                $('.filter-item').removeClass('active');
+                $('.filter-item__content').slideUp(100); 
+                $(this).parents('.filter-item').addClass('active');     
+                $(this).parents('.filter-item').find('.filter-item__content').slideDown(100);     
+            }else{
+                $('.filter-item').removeClass('active');
+                $('.filter-item__content').slideUp(100);             
+            }       
         }else{
-            $('.filter-item').removeClass('active');
-            $('.filter-item__content').slideUp(100);             
-        }       
+            $(this).parents('.filter-item').toggleClass('active');     
+            $(this).parents('.filter-item').find('.filter-item__content').slideToggle(100);     
+        }        
         return false;
     });
     
-    $('.filter-item-list').overlayScrollbars({ /* your options */ }); 
-    $('.filter-aside-list_overflow').overlayScrollbars({ /* your options */ }); 
+    $('.filter-item-list').overlayScrollbars({}); 
+    $('.filter-aside-list_overflow').overlayScrollbars({}); 
     
     
     if($('#filter-slider-prices').length){
@@ -426,10 +437,15 @@ $(document).ready(function(){
          responsive: [
            
             {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
-                    variableWidth:true
+                    slidesToShow: 4
                 }
             }
         ]
@@ -500,7 +516,6 @@ $(document).ready(function(){
                     },
         }); 
         var id=$(this).parents('.slider-photos__slide').attr('data-slick-index');
-        console.log(id);
         $('.js-slider-photos').slick('slickGoTo', id);
         return false;
     })
@@ -608,6 +623,18 @@ $(document).ready(function(){
             $('.header-search-tags').hide();
     });
     */
+    
+    $('.js-filter-btn').click(function(){ 
+        $(".js-filter").addClass('active');
+        $('body').addClass('body-filter-open');
+        return false;
+    });
+    
+    $('.js-filter-close').click(function(){ 
+        $(".js-filter").removeClass('active');
+         $('body').removeClass('body-filter-open');
+        return false;
+    });
     
     
     $('.form-subscribe').each(function() {  
