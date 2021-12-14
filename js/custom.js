@@ -56,15 +56,18 @@ $(document).ready(function(){
         event.stopPropagation();
     })
     
-     /*$(document).bind("click touchstart",function(event) {
-        if($('body').hasClass('menu-open')){
-            if ($(event.target).closest(".header__nav, .mobile-trigger").length) return;
-            $('body').removeClass('menu-open');
-            $('.header__nav').removeClass('active') ;
-            $('.mobile-trigger').removeClass('is-active');
-            event.stopPropagation();
-        }       
-     });  */
+    $('.choose-city__title').on('click', function(event) {       
+       $(this).next('.choose-city__content').slideToggle(100);  
+        return false;
+    })
+    
+     $(document).bind("click touchstart",function(event) {
+    
+        if ($(event.target).closest(".choose-city").length) return;
+         $('.choose-city__content').slideUp(100);   
+         event.stopPropagation();
+              
+     });
     
    
     $('select.resizeselect').change(function(){
@@ -239,7 +242,6 @@ $(document).ready(function(){
     
     $('.filter-item-list').overlayScrollbars({}); 
     $('.filter-aside-list_overflow').overlayScrollbars({}); 
-    
     
     if($('#filter-slider-prices').length){
     
@@ -484,7 +486,7 @@ $(document).ready(function(){
         nextArrow:'<button type="button" class="slick-next"><svg width="15" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.08 1.094c-.312.312-.28.781 0 1.093L9.862 5.75H.892a.74.74 0 00-.75.75v1c0 .438.313.75.75.75h8.97L6.08 11.844a.814.814 0 000 1.094l.688.687c.312.281.781.281 1.062 0l6.094-6.094c.281-.281.281-.75 0-1.062L7.83.406c-.28-.281-.75-.281-1.062 0l-.688.688z"></svg></button>',
     });
     
-    $('.slider-photos-nav__item').click(function(){        
+    /*('.slider-photos-nav__item').click(function(){        
         $(this).parents('.product-images').find('.slider-photos-image-nav__item').removeClass('active');
         $(this).addClass('active');
         $(this).parents('.product-images').find('.js-slider-photos').slick('slickGoTo', $(this).attr('data-slide') - 1);
@@ -497,8 +499,31 @@ $(document).ready(function(){
         $(this).parents('.product-images').find('.slider-photos-nav__item[data-slide="'+ i +'"]').addClass('active');
         
     });
-    
+    */
     $('.slick-cloned a').removeAttr('data-fancybox');    
+    
+    
+     $('.js-slider-photos-2').slick({
+         fade:true,
+         slidesToShow: 1,
+         slidesToScroll: 1,
+        arrows:true,
+         asNavFor: '.js-slider-photos-2-nav',
+         prevArrow:'<button type="button" class="slick-prev"><svg width="15" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.174 12.938c.313-.313.281-.782 0-1.094L4.393 8.25h9a.74.74 0 00.75-.75v-1a.76.76 0 00-.75-.75h-9l3.781-3.563c.281-.312.313-.78 0-1.093L7.487.406a.774.774 0 00-1.063 0L.362 6.5a.684.684 0 000 1.031l6.062 6.094c.281.281.75.281 1.063 0l.687-.688z"/></svg></button>',
+            nextArrow:'<button type="button" class="slick-next"><svg width="15" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.08 1.094c-.312.312-.28.781 0 1.093L9.862 5.75H.892a.74.74 0 00-.75.75v1c0 .438.313.75.75.75h8.97L6.08 11.844a.814.814 0 000 1.094l.688.687c.312.281.781.281 1.062 0l6.094-6.094c.281-.281.281-.75 0-1.062L7.83.406c-.28-.281-.75-.281-1.062 0l-.688.688z"></svg></button>',
+    });
+    $('.js-slider-photos-2-nav').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: '.js-slider-photos-2',
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,        
+        arrows: false,
+        vertical:true,
+        verticalSwiping: true,
+        swipeToSlide:true
+    });
     
     
     $('.js-popup-photos').click(function(){        
@@ -558,6 +583,8 @@ $(document).ready(function(){
         $(this).addClass('active');
         $(this).parents('.product-tabs').find('.product-tabs-content').removeClass('active');
         $(this).parents('.product-tabs').find('.product-tabs-content[data-tab="'+$(this).attr('data-tab')+'"]').addClass('active');
+        $('.js-slider-photos-2-nav').slick('resize');
+        $('.js-slider-photos-2').slick('resize');
         return false;
     });    
     
@@ -661,172 +688,70 @@ $(document).ready(function(){
          });
     });
     
+    
+    $('.js-products-item-hover-photo').slick({
+        infinite: true,
+        arrows:true,
+        dots:false,
+        slidesToShow:1,
+        slidesToScroll: 1,
+        lazyLoad: 'progressive',
+        prevArrow:'<button type="button" class="slick-prev"><svg width="15" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.174 12.938c.313-.313.281-.782 0-1.094L4.393 8.25h9a.74.74 0 00.75-.75v-1a.76.76 0 00-.75-.75h-9l3.781-3.563c.281-.312.313-.78 0-1.093L7.487.406a.774.774 0 00-1.063 0L.362 6.5a.684.684 0 000 1.031l6.062 6.094c.281.281.75.281 1.063 0l.687-.688z"/></svg></button>',
+        nextArrow:'<button type="button" class="slick-next"><svg width="15" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.08 1.094c-.312.312-.28.781 0 1.093L9.862 5.75H.892a.74.74 0 00-.75.75v1c0 .438.313.75.75.75h8.97L6.08 11.844a.814.814 0 000 1.094l.688.687c.312.281.781.281 1.062 0l6.094-6.094c.281-.281.281-.75 0-1.062L7.83.406c-.28-.281-.75-.281-1.062 0l-.688.688z"></svg></button>' 
+    });
+    
+    
+    $('.js-text-more-hidden-toggle').click(function(){ 
+        $(this).prev('.js-text-more-hidden').toggleClass('text-more-hidden');
+        if($(this).prev('.js-text-more-hidden').hasClass('text-more-hidden')){
+            $(this).text($(this).attr('data-show'));
+        }else{
+             $(this).text($(this).attr('data-hide'));
+        }
+        return false;
+    });
+    
+    if($('#timer').length){
+        
+        var day = new Date();
+        var nextDay = new Date(day);
+        nextDay.setDate(day.getDate() + 2);
+        console.log(nextDay); // May 01 2000    
+        
+        var countDownDate = new Date(nextDay).getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get today's date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Output the result in an element with id="demo"
+          document.getElementById("timer").innerHTML = days + " д " + hours + " ч "
+          + minutes + " мин " + seconds + " сек";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+    }
+    
+    
     var ll2 = new LazyLoad({
         elements_selector: ".slick-slide .lazyload",
     });
     
     ll2.loadAll();
-    
-    
-    
-    /*
-   
-    
-    
-    
-    
-    
-     $('.js-slider-main').slick({
-        infinite:true, 
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots:false,
-        arrows:false,
-        fade:true,
-         autoplay:true,
-    });
-    
-    $('.slider-main-nav__item').click(function(){        
-        $('.slider-main-nav__item').removeClass('active');
-        $(this).addClass('active');
-        $('.js-slider-main').slick('slickGoTo', $(this).attr('data-slide') - 1);
-        return false;
-    })
-    
-    $('.js-slider-main').on('beforeChange', function(event, slideCount, currentSlide, nextSlide){
-      $('.slider-main-nav__item').removeClass('active');
-        var i=nextSlide + 1;
-        $('.slider-main-nav__item[data-slide="'+ i +'"]').addClass('active');
-        
-    });
-    
-    $('.js-slider-production').on('init', function(event, slick, direction){
-        ll.update();
-    });
-    
-    
-    
-    $('.form-app').each(function() {  
-        $(this).validate({  
-             ignore: ':hidden:not(select)',
-             errorElement:'div',
-             errorPlacement: function(error, element) {
-                element.parents('.form-col').append(error);                                  
-            },
-            rules: {
-                'name': "required",               
-                'phone': "required",               
-                'messege': "required",               
-                'agree': "required",               
-            },
-            messages: {
-                'name': "Заполните данное поле",               
-                'phone': "Заполните данное поле",               
-                'messege': "Заполните данное поле",               
-                'agree': "Заполните данное поле", 
-            },
-            submitHandler: function(form){
-              $.fancybox.open({
-                    src  : '#popup-thank',
-                    type : 'inline',
-                    touch: false,
-                    closeExisting: true,
-                    autoFocus: false,
-                    
-                });         
-            }
-         });
-    });
-    
-     $('.js-slider-works').slick({
-        infinite: true,
-        arrows:true,
-        dots:true,
-        rows:2,
-        slidesPerRow:4,
-        prevArrow:'<button type="button" class="slick-prev"><svg width="15" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.174 12.938c.313-.313.281-.782 0-1.094L4.393 8.25h9a.74.74 0 00.75-.75v-1a.76.76 0 00-.75-.75h-9l3.781-3.563c.281-.312.313-.78 0-1.093L7.487.406a.774.774 0 00-1.063 0L.362 6.5a.684.684 0 000 1.031l6.062 6.094c.281.281.75.281 1.063 0l.687-.688z"/></svg></button>',
-        nextArrow:'<button type="button" class="slick-next"><svg width="15" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.08 1.094c-.312.312-.28.781 0 1.093L9.862 5.75H.892a.74.74 0 00-.75.75v1c0 .438.313.75.75.75h8.97L6.08 11.844a.814.814 0 000 1.094l.688.687c.312.281.781.281 1.062 0l6.094-6.094c.281-.281.281-.75 0-1.062L7.83.406c-.28-.281-.75-.281-1.062 0l-.688.688z"></svg></button>',
-        appendArrows:$('.works-arrows'),
-         responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesPerRow:3,
-                }
-            },
-             {
-                breakpoint: 768,
-                settings: {
-                    slidesPerRow:2,
-                }
-            },
-             {
-                breakpoint: 425,
-                settings: {
-                    slidesPerRow:1,
-                }
-            }
-        ]
-    });
-    
-    $('.form-partner').each(function() {  
-        $(this).validate({  
-             ignore: ':hidden:not(select)',
-             errorElement:'div',
-             errorPlacement: function(error, element) {
-                element.parents('.form-col').append(error);                                  
-            },
-            rules: {
-                'company': "required",               
-                'name': "required",               
-                'phone': "required",               
-                'messege': "required",               
-                'agree': "required",               
-            },
-            messages: {
-                'company': "Заполните данное поле",               
-                'name': "Заполните данное поле",               
-                'phone': "Заполните данное поле",               
-                'messege': "Заполните данное поле",               
-                'agree': "Заполните данное поле", 
-            },
-            submitHandler: function(form){
-              $.fancybox.open({
-                    src  : '#popup-thank',
-                    type : 'inline',
-                    touch: false,
-                    closeExisting: true,
-                    autoFocus: false,
-                    
-                });  
-            }
-         });
-    });
-    
-    $('[data-fancybox]').fancybox({
-        touch: false,
-        closeExisting: true,
-        autoFocus: false        
-    });
-
-   
-    
-    $('.popup-open').on('click', function(event) {
-        var title=$(this).attr('data-title');
-        $.fancybox.open({
-                    src  : '#popup-callback',
-                    type : 'inline',
-                    touch: false,
-                    closeExisting: true,
-                    autoFocus: false,
-                    beforeShow : function( instance, current ) {
-                        $('#popup-callback .title').text(title);
-                    },
-                }); 
-        return false;
-        
-    });
-    
-    */
 
 });

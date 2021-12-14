@@ -13,7 +13,7 @@
     &__logo{
         display: inline-block;
         max-width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 45px;
         img{
             display:block;
             max-width: 100%;
@@ -25,6 +25,7 @@
         color: $color-black;
         &__title{
             padding-left: 10px;
+            margin-bottom: 5px;
         }
     }
     
@@ -67,7 +68,7 @@
         text-align: center;
     }
     &__top{
-        padding-bottom: 40px;
+        padding-bottom: 45px;
     }
     &__left{
         
