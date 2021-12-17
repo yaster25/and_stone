@@ -135,10 +135,6 @@
                 fill:$color-orange;
             }
         }
-        
-        &_catalog{
-            display: none;
-        }
     }
     &__bottom{
         background: $color-light-light-grey;
@@ -149,7 +145,7 @@
     
     &__btn-nav{
         background:$color-white;
-        border: 1px solid $color-orange;
+        border: 1px solid rgba($color-orange,0.5);
         border-radius: 24px;
         height: 48px;
         width: 260px;
@@ -172,6 +168,7 @@
         }
         &:hover{
             background: $color-orange;
+            border-color: $color-orange;
             color: $color-white;
             svg{
                 fill:$color-white;
@@ -185,7 +182,7 @@
     }
     &-search{        
         height: 48px;
-        border:1px solid $color-light-graphite;
+        border:1px solid rgba($color-light-graphite, 0.5);
         border-radius: 24px;
         background: $color-white;
         position: relative;
@@ -253,7 +250,7 @@
                 height: 20px;
             }
             &:hover{
-                background: $color-graphite;
+                background: $color-black;
             }
         }
     }
@@ -277,7 +274,7 @@
             text-decoration: underline;
             margin-right: 5px;
             &:hover{
-                color: $color-graphite;
+                color: $color-black;
             }
         }        
     }
@@ -298,20 +295,11 @@
     z-index: 2;
     font-weight: 500;
     font-size: 12px;
-    line-height: 14px;
-    
+    line-height: 14px;    
     color: $color-black;
-    &__title{
-        display: inline-block;
-        position: relative;
-        padding: 0 20px 0 26px;        
-        
-        cursor: pointer;
-        transition: $default-transition;
-        z-index: 2;
-        &:hover{
+    padding: 0 20px 0 26px;   
+    &:hover{
             color: $color-orange;
-        }
     }
     &__pin{
         top: calc(50% - 10px);
@@ -324,7 +312,7 @@
     &__arrow{
         fill:$color-light-graphite;
         position: absolute;
-        top: calc(50% - 3px);
+        top: calc(50% - 2px);
         width: 10px;
         height: 6px;
         right: 0;
@@ -349,17 +337,8 @@
                     color:$color-orange;
                 }
             }
-        }
-        
-    }
-    &:hover{
-        .choose-city__title{
-            color: $color-orange;
-        }
-        .choose-city__content{
-            //display: block;
-        }
-    }
+        }        
+    }    
 }
 
 .top-nav{
@@ -693,7 +672,7 @@ body.menu-open {
         margin-right: 10px;
     }
     
-    .header__link{
+    /*.header__link{
         &_catalog{
             order: 1;
             display: block;
@@ -713,7 +692,7 @@ body.menu-open {
         &_fav{
             display: none;
         }
-    }
+    }*/
     .header__slogan{
         max-width: 130px;
     }

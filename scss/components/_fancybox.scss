@@ -52,15 +52,17 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-bg {
-    background: $color-black;
+    background: $color-graphite;
     opacity: 0;
     transition-duration: inherit;
     transition-property: opacity;
+    //transition-timing-function: ease-in-out;
     transition-timing-function: cubic-bezier(.47, 0, .74, .71);
 }
 
 .fancybox-is-open .fancybox-bg {
-    opacity: .8;
+    opacity: .5;
+    //transition-timing-function: ease-in-out;
     transition-timing-function: cubic-bezier(.22, .61, .36, 1);
 }
 
@@ -409,7 +411,7 @@ body.compensate-for-scrollbar {
     top: 20px;
     z-index: 401;
     @include transition($default-transition);
-    color: $color-red;
+    color: $color-graphite;
     opacity: 1;
     svg{
             fill: currentColor;
@@ -421,9 +423,11 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-slide--html .fancybox-close-small {
-    top: 20px;
-    right: 20px;
+    top: 12px;
+    right: 12px;
     padding: 0px;   
+    width: 30px;
+    height: 30px;
 }
 
 

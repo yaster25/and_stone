@@ -13,6 +13,16 @@ $(document).ready(function(){
     var ll = new LazyLoad({
         elements_selector: ".lazyload",
     });
+    
+    
+    $('.js-popup-open').fancybox({
+        src  : $(this).attr('href'),
+        type : 'inline',
+        touch: false,
+        closeExisting: true,
+        autoFocus: false
+    });
+    
 
 	function showDiv() {
 		if ($(window).scrollTop() > 0) {			
@@ -56,18 +66,19 @@ $(document).ready(function(){
         event.stopPropagation();
     })
     
-    $('.choose-city__title').on('click', function(event) {       
-       $(this).next('.choose-city__content').slideToggle(100);  
+    $('.js-link-city-more').click(function(){ 
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')){
+            $(this).text($(this).attr('data-hide'));
+            $(this).next('.js-city-more').slideDown();
+        }else{
+            $(this).text($(this).attr('data-show'));
+            $(this).next('.js-city-more').slideUp();
+        }    
         return false;
-    })
+    });
     
-     $(document).bind("click touchstart",function(event) {
-    
-        if ($(event.target).closest(".choose-city").length) return;
-         $('.choose-city__content').slideUp(100);   
-         event.stopPropagation();
-              
-     });
+    $('.city-more__inner').overlayScrollbars({}); 
     
    
     $('select.resizeselect').change(function(){
@@ -243,6 +254,7 @@ $(document).ready(function(){
     $('.filter-item-list').overlayScrollbars({}); 
     $('.filter-aside-list_overflow').overlayScrollbars({}); 
     
+    
     if($('#filter-slider-prices').length){
     
         var handlesSlider = document.getElementById("filter-slider-prices"),
@@ -386,11 +398,11 @@ $(document).ready(function(){
             }
         });
 
-        valueInputW.addEventListener('change', function(){
+        valueInputA.addEventListener('change', function(){
             handlesSliderA.noUiSlider.set([this.value, null]);
         });
 
-        valueInput2W.addEventListener('change', function(){
+        valueInput2A.addEventListener('change', function(){
             handlesSliderA.noUiSlider.set([null, this.value]);
         });
     
@@ -710,6 +722,74 @@ $(document).ready(function(){
         }
         return false;
     });
+    
+     $.fn.setCursorPosition = function(pos) {
+        if ($(this).get(0).setSelectionRange) {
+          $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+          var range = $(this).get(0).createTextRange();
+          range.collapse(true);
+          range.moveEnd('character', pos);
+          range.moveStart('character', pos);
+          range.select();
+        }
+      };
+    
+    $(".input-phone").mask("+7 (999) 999-99-99").on('click', function () {
+        if ($(this).val() === '+7 (___) ___-__-__') {
+           $(this).setCursorPosition(4);
+        }
+    });
+    
+    $('.js-get-code').click(function(){ 
+        $(this).parents('.form-auth').find('.form-auth__btn').hide();
+        $(this).parents('.form-auth').find('.form-auth__code').show();
+        
+        var this_form=$(this).parents('.form-auth');
+        
+        var count = 60;
+        var innterval = setInterval(function() {
+        if (count == 0)
+            {
+                console.log('end');
+                clearInterval(innterval);
+                this_form.find('.form-auth__timer-count').hide();
+                this_form.find('.form-auth__timer-finish').show();
+            }else{
+                console.log(count);
+                count--;
+                this_form.find('.form-auth__timer-time').html(count);
+            }           
+            
+          }, 1000);
+        
+        return false;
+    });
+    
+    $('.form-auth__timer-finish a').click(function(){ 
+        $(this).parents('.form-auth').find('.form-auth__timer-count').show();
+        $(this).parents('.form-auth').find('.form-auth__timer-finish').hide();
+        var this_form=$(this).parents('.form-auth');
+        var count = 60;
+        var innterval = setInterval(function() {
+        if (count == 0)
+            {
+                console.log('end');
+                clearInterval(innterval);
+                this_form.find('.form-auth__timer-count').hide();
+                this_form.find('.form-auth__timer-finish').show();
+            }else{
+                console.log(count);
+                count--;
+                this_form.find('.form-auth__timer-time').html(count);
+            }           
+            
+          }, 1000);
+        return false;  
+    })
+    
+
+    
     
     if($('#timer').length){
         
