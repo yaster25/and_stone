@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AND Stone - Карточка товара</title>
+    <meta name='description' content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />    
+</head>
+
+<body>
+    <!-- BEGIN BODY -->
+    <div class="main-wrapper" id="top">
+        <div class="main-wrapper__before"></div>
+        <!-- BEGIN HEADER -->
+        <header class="header" id="header">
+            <div class="main-wrapper__before"></div>
+            <div class="header__top">
+                <div class="wrapper d-flex align-items-center">
+                    <div class="header__top-left">
+                        <div class="header__nav">
+                            <div class="header__nav-title">
+                                Меню:
+                                <a href="#" class="header__nav-close js-nav-close"><svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m8.17 6.981 5.609-5.61a.814.814 0 0 0-1.15-1.15l-5.61 5.61L1.409.218a.814.814 0 0 0-1.15 1.15l5.61 5.613-5.61 5.61a.814.814 0 1 0 1.15 1.15l5.61-5.61 5.61 5.61a.814.814 0 0 0 1.15-1.15l-5.61-5.61Z"/></svg></a>
+                            </div>
+                            <div class="header__nav-btns">
+                                <a href="02-catalog.html" class="header__btn-nav">
+                                    КАТАЛОГ КАМНЯ
+                                    <svg width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h20v2H0zM0 6h20v2H0zM0 12h14v2H0zM18 15l-2-3h4l-2 3Z"/></svg>
+                                </a>                                
+                                <a href="#" class="header__btn-nav">
+                                    ВЫБРАТЬ УСЛУГУ
+                                    <svg width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h20v2H0zM0 6h20v2H0zM0 12h14v2H0zM18 15l-2-3h4l-2 3Z"/></svg>
+                                </a>
+                            </div>
+                            <ul class="top-nav">
+                                <li class="top-nav-item">
+                                    <a href="#" class="top-nav-item__link top-nav-item__link_orange">Продавайте с AndStone</a>
+                                </li>
+                                <li class="top-nav-item">
+                                    <a href="#" class="top-nav-item__link">Акции</a>
+                                </li>
+                                <li class="top-nav-item">
+                                    <a href="#" class="top-nav-item__link top-nav-item__link_black">Cashback %</a>
+                                </li>
+                                <li class="top-nav-item">
+                                    <a href="#" class="top-nav-item__link">Реклама</a>
+                                </li>
+                                <li class="top-nav-item">
+                                    <a href="#" class="top-nav-item__link">Новости</a>
+                                </li>
+                                <li class="top-nav-item">
+                                    <a href="#" class="top-nav-item__link">О компании</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                    
+                    <div class="header__top-right">
+                        <div class="header__top-right-item header__top-right-item_m-hide">
+                            <a href="#" class="header__top-link"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.389 8.771c-.025-.055-.62-1.376-1.944-2.7C13.68 4.307 11.452 3.374 9 3.374c-2.452 0-4.68.933-6.445 2.697C1.231 7.395.635 8.716.611 8.77a.563.563 0 0 0 0 .457c.025.056.62 1.377 1.944 2.7C4.32 13.693 6.548 14.625 9 14.625c2.452 0 4.68-.932 6.445-2.695 1.324-1.324 1.92-2.645 1.944-2.7a.564.564 0 0 0 0-.457ZM9 13.5c-2.164 0-4.055-.786-5.62-2.337A9.382 9.382 0 0 1 1.754 9 9.386 9.386 0 0 1 3.38 6.838C4.945 5.286 6.836 4.499 9 4.499s4.055.787 5.62 2.339A9.38 9.38 0 0 1 16.246 9c-.507.946-2.716 4.5-7.246 4.5Zm0-7.874a3.375 3.375 0 1 0 0 6.75 3.375 3.375 0 0 0 0-6.75Zm0 5.625a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Z"/></svg>Просмотренные (0)</a>
+                        </div>
+                        <div class="header__top-right-item header__top-right-item_m-hide">
+                            <a href="#" class="header__top-link"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.467 8.8h-8.8v1.467h8.8V8.8Zm0-2.933h-8.8v1.466h8.8V5.867Zm2.933 5.866V8.8h-1.467v2.933H11V13.2h2.933v2.933H15.4V13.2h2.933v-1.467H15.4ZM3.667 13.2h5.866v-1.467H3.667V13.2Z"/></svg>Сравнение (15)</a>
+                        </div>
+                        <div class="header__top-right-item">
+                            <a href="tel:88007557575" class="header__phone">
+                                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.672 3.676a3.353 3.353 0 0 1 2.647 2.642M9.672 1c1.36.15 2.628.759 3.596 1.724A6.016 6.016 0 0 1 15 6.312m-.67 5.338v2.007a1.336 1.336 0 0 1-1.461 1.338 13.28 13.28 0 0 1-5.785-2.054 13.058 13.058 0 0 1-4.02-4.014 13.222 13.222 0 0 1-2.059-5.8A1.336 1.336 0 0 1 2.34 1.67h2.01a1.342 1.342 0 0 1 1.341 1.15c.085.643.243 1.273.47 1.88a1.336 1.336 0 0 1-.302 1.412l-.851.85a10.713 10.713 0 0 0 4.021 4.013l.851-.85a1.341 1.341 0 0 1 1.415-.3 8.62 8.62 0 0 0 1.883.468 1.34 1.34 0 0 1 1.153 1.358Z"/></svg>
+                                8 800 755 75 75
+                            </a>
+                        </div>
+                        <div class="header__top-right-item">
+                            <div class="header__city">
+                                <a href="#popup-city" class="choose-city js-popup-open">
+                                    <svg class="choose-city__pin" width="16" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m8.697 18.261.368.339-.368-.339Zm-1.394 0-.368.339.368-.339ZM14.5 8c0 .67-.248 1.5-.688 2.432-.436.923-1.041 1.902-1.71 2.857-1.335 1.91-2.894 3.679-3.773 4.633l.736.678c.891-.969 2.484-2.775 3.857-4.737.686-.981 1.325-2.012 1.794-3.004.465-.984.784-1.973.784-2.859h-1Zm-6.829 9.922c-.879-.954-2.438-2.723-3.774-4.633-.668-.955-1.273-1.934-1.709-2.857C1.748 9.5 1.5 8.669 1.5 8h-1c0 .886.319 1.875.784 2.859.469.992 1.108 2.023 1.794 3.004 1.373 1.962 2.966 3.768 3.857 4.737l.736-.678ZM1.5 8A6.5 6.5 0 0 1 8 1.5v-1A7.5 7.5 0 0 0 .5 8h1ZM8 1.5A6.5 6.5 0 0 1 14.5 8h1A7.5 7.5 0 0 0 8 .5v1Zm.329 16.422a.44.44 0 0 1-.658 0l-.736.678a1.44 1.44 0 0 0 2.13 0l-.736-.678ZM10.5 8A2.5 2.5 0 0 1 8 10.5v1A3.5 3.5 0 0 0 11.5 8h-1ZM8 10.5A2.5 2.5 0 0 1 5.5 8h-1A3.5 3.5 0 0 0 8 11.5v-1ZM5.5 8A2.5 2.5 0 0 1 8 5.5v-1A3.5 3.5 0 0 0 4.5 8h1ZM8 5.5A2.5 2.5 0 0 1 10.5 8h1A3.5 3.5 0 0 0 8 4.5v1Z"/></svg>
+                                    <span>Москва</span>
+                                    <svg class="choose-city__arrow" width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 6a.68.68 0 0 1-.495-.216l-4.3-4.526a.765.765 0 0 1 0-1.042.676.676 0 0 1 .99 0L5 4.22 8.805.216a.676.676 0 0 1 .99 0 .765.765 0 0 1 0 1.042l-4.3 4.526A.68.68 0 0 1 5 6Z" fill="#9497AA"/></svg>
+                                </a>
+                                <div class="choose-city-alert">
+                                    <div class="choose-city-alert__arrow"></div>
+                                    <div class="choose-city-alert__inner">
+                                        <p>Ваш город <b>Москва?</b></p>
+                                        <div class="choose-city-alert__btns">
+                                            <a href="#" class="btn btn_xs js-choose-city-alert-close">ВСЕ ВЕРНО</a>
+                                            <a href="#popup-city" class="link js-popup-open">Выбрать город</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="header__main">
+                <div class="wrapper d-flex align-items-center justify-content-between">
+                    <div class="header__main-left">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo.svg" alt="" width="160" height="52">
+                        </a>
+                        <div class="header__slogan">Первый в мире мегамаркет натурального камня</div>
+                    </div>
+                    
+                    <a href="02-catalog.html" class="btn header__catalog">
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4ZM3 10.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3ZM3 17a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3ZM9.5 4a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V4ZM9.5 10.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-3ZM9.5 17a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-3ZM16 4a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V4ZM16 10.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-3ZM16 17a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-3Z"/></svg>
+                        КАТАЛОГ КАМНЯ
+                    </a>
+                    
+                    <a href="#" class="btn btn_border-grey header__catalog">
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 18.005c0 .55-.446.995-.995.995h-8.01a.995.995 0 1 1 0-1.99h8.01c.55 0 .995.445.995.995ZM22 12c0 .55-.446.995-.995.995H2.995a.995.995 0 1 1 0-1.99h18.01c.55 0 .995.446.995.995ZM21.005 6.99a.995.995 0 1 0 0-1.99H8.995a.995.995 0 0 0 0 1.99h12.01Z"/></svg>
+                        УСЛУГИ
+                    </a>
+                    
+                    <div class="header__search">
+                        <form class="header-search">
+                            <input type="text" name="and_search" class="header-search__input" id="input-search" placeholder="Искать товары">
+                            <button class="header-search__btn"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.707 8a8 8 0 1 1 3.094 6.32l-5.387 5.387L0 18.293l5.387-5.387A7.965 7.965 0 0 1 3.707 8Zm8 6a6 6 0 1 1 0-12 6 6 0 0 1 0 12Z"/></svg></button>
+                            <a href="#" class="header-search__clear"><svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m8.17 6.981 5.609-5.61a.814.814 0 0 0-1.15-1.15l-5.61 5.61L1.409.218a.814.814 0 0 0-1.15 1.15l5.61 5.613-5.61 5.61a.814.814 0 1 0 1.15 1.15l5.61-5.61 5.61 5.61a.814.814 0 0 0 1.15-1.15l-5.61-5.61Z"/></svg></a>
+                            <div class="header-search__content">
+                                <div class="header-search__content-inner">
+                                <ul class="header-search__list">
+                                    <li>
+                                        <a href="#"><span>Мрамор Azul Emp</span>erador </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Мрамор Azul Emp</span>erio</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Мрамор New Azul Emp</span>erador </a>
+                                    </li>
+                                </ul>                                    
+                                <div class="header-search__hr"></div>
+                                <ul class="header-search__list-2">
+                                    <li>
+                                        <a href="#" class="header-search-batch">
+                                            <div class="header-search-batch__img">
+                                                <img src="img/products/image-header-search-01.png" alt="">
+                                            </div>
+                                            <div class="header-search-batch__content">
+                                                <div class="header-search-batch__title">Партия БР. Слеб 20 мм. <br><span>Мрамор Azul Emp</span>erador Азул Имперадор </div>
+                                                <div class="header-search-batch__info">2770 x 1150 x 20 мм, Италия, Полировка, от 2 000 <span class="b-rub">Р</span>/м<sup class="m2">2</sup></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="header-search-batch">
+                                            <div class="header-search-batch__img">
+                                                <img src="img/products/image-header-search-02.png" alt="">
+                                            </div>
+                                            <div class="header-search-batch__content">
+                                                <div class="header-search-batch__title">Партия БР. Слеб 20 мм. <br><span>Мрамор Azul Emp</span>erador Азул Имперадор </div>
+                                                <div class="header-search-batch__info">2770 x 1150 x 20 мм, Италия, Полировка, от 3500 <span class="b-rub">Р</span>/м<sup class="m2">2</sup></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="header-search__hr"></div>
+                                <ul class="header-search__list-2">
+                                    <li>
+                                        <a href="#" class="header-search-product">                                            
+                                            <div class="header-search-product__title"><span>Azul Emp</span>erador</div>
+                                            <div class="header-search-product__info">Каталог камня / <b>Мрамор</b></div>
+                                        </a>
+                                    </li>
+                                   <li>
+                                        <a href="#" class="header-search-product">                                            
+                                            <div class="header-search-product__title"><span>Azul Emp</span>erio</div>
+                                            <div class="header-search-product__info">Каталог камня / <b>Мрамор</b></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="header-search-tags">
+                            <a href="#">Мрамор белый</a>  <a href="#">Плитка из камня</a>  <a href="#">Оникс с подсветкой</a> <a href="#">Травертин</a> 
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="header__links">
+                        <a href="02-catalog.html" class="header__link header__link_catalog">
+                            <!--<svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 11h4V7H7v4Zm6 12h4v-4h-4v4Zm-6 0h4v-4H7v4Zm0-6h4v-4H7v4Zm6 0h4v-4h-4v4Zm6-10v4h4V7h-4Zm-6 4h4V7h-4v4Zm6 6h4v-4h-4v4Zm0 6h4v-4h-4v4Z" stroke="none"/></svg>-->
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4ZM3 10.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3ZM3 17a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3ZM9.5 4a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V4ZM9.5 10.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-3ZM9.5 17a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-3ZM16 4a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V4ZM16 10.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-3ZM16 17a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-3Z"></path></svg>
+                            Каталог
+                        </a>
+                        <a href="#" class="header__link header__link_watch">
+                            <svg width="30" height="30" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.389 8.771c-.025-.055-.62-1.376-1.944-2.7C13.68 4.307 11.452 3.374 9 3.374c-2.452 0-4.68.933-6.445 2.697C1.231 7.395.635 8.716.611 8.77a.563.563 0 0 0 0 .457c.025.056.62 1.377 1.944 2.7C4.32 13.693 6.548 14.625 9 14.625c2.452 0 4.68-.932 6.445-2.695 1.324-1.324 1.92-2.645 1.944-2.7a.564.564 0 0 0 0-.457ZM9 13.5c-2.164 0-4.055-.786-5.62-2.337A9.382 9.382 0 0 1 1.754 9 9.386 9.386 0 0 1 3.38 6.838C4.945 5.286 6.836 4.499 9 4.499s4.055.787 5.62 2.339A9.38 9.38 0 0 1 16.246 9c-.507.946-2.716 4.5-7.246 4.5Zm0-7.874a3.375 3.375 0 1 0 0 6.75 3.375 3.375 0 0 0 0-6.75Zm0 5.625a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Z" stroke="none"/></svg>
+                            Смотрели
+                        </a>
+                        
+                        <a href="#popup-auth" class="header__link header__link_auth js-popup-open">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.156 8.438c-.23 3.097-2.578 5.624-5.156 5.624s-4.93-2.526-5.156-5.624C9.609 5.215 11.894 2.811 15 2.811c3.105 0 5.39 2.461 5.156 5.626Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M15 17.813c-5.098 0-10.271 2.812-11.229 8.12-.115.64.247 1.255.916 1.255h20.625c.67 0 1.033-.615.918-1.254-.959-5.309-6.132-8.122-11.23-8.122Z" fill="none"  stroke-width="2" stroke-miterlimit="10"/></svg>
+                            Войти
+                        </a>                         
+                        
+                        <a href="#" class="header__link header__link_favorite">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.679 4.688c-3.804 0-5.679 3.75-5.679 3.75s-1.875-3.75-5.679-3.75c-3.091 0-5.54 2.586-5.571 5.672-.064 6.406 5.082 10.962 10.723 14.79a.938.938 0 0 0 1.054 0c5.64-3.828 10.787-8.384 10.723-14.79-.032-3.086-2.48-5.672-5.571-5.672v0Z" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Избранное
+                            <span class="header__link-icon">10</span>
+                        </a>
+                        
+                        <a href="#" class="header__link header__link_compare">
+                            <svg width="32" height="32"  viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.133 12.8h-12.8v2.133h12.8V12.8Zm0-4.267h-12.8v2.134h12.8V8.533Zm4.267 8.534V12.8h-2.133v4.267H16V19.2h4.267v4.267H22.4V19.2h4.267v-2.133H22.4ZM5.333 19.2h8.534v-2.133H5.333V19.2Z" stroke="none"/></svg>
+                            Сравнение
+                        </a>
+                        <a href="#" class="header__link header__link_cart">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 3.75h2.5l.5 2.5m0 0h19.5l-5 10H8.75m-2-10 2 10m0 0-2.866 2.866c-.788.788-.23 2.134.883 2.134H21.25m0 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-10 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Корзина
+                            <span class="header__link-icon">10</span>
+                        </a>
+                        
+                    </div>
+                    <a href="#" id="hamburger" class="mobile-trigger">
+                        <span class="hamburger hamburger--collapse">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </header>
+         <!-- HEADER EOF   -->
+    <main class="content">
+        <div class="section section-inside-top">
+            <div class="wrapper">
+                
+                <div class="section-product-top">
+                    <div class="section-product-top__left">
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs-item">
+                                <a href="#" class="breadcrumbs-item__link">Главная</a>
+                            </li> 
+                            <li class="breadcrumbs-item">
+                                <a href="#" class="breadcrumbs-item__link">Каталог камня</a>
+                            </li> 
+                            <li class="breadcrumbs-item">
+                                <a href="#" class="breadcrumbs-item__link">Мрамор</a>
+                            </li> 
+                            <li class="breadcrumbs-item">Арабескато Оробико Сильвер</li>
+                        </ul>
+                        <div class="product-title">
+                            <h1 class="title-normal title-normal_md">Слеб Арабескато Оробико Сильвер <span>Slab Arabescato Orobiko Silver</span></h1>
+                            <a href="#" class="btn btn_sm btn_border-grey"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.188 2.39h-9a.422.422 0 0 0-.422.422v2.953H2.812a.422.422 0 0 0-.421.422v9a.422.422 0 0 0 .421.422h9a.422.422 0 0 0 .422-.422v-2.953h2.954a.422.422 0 0 0 .421-.422v-9a.422.422 0 0 0-.421-.422ZM11.39 14.765H3.234V6.61h8.157v8.156Zm3.375-3.375h-2.532V6.187a.422.422 0 0 0-.422-.422H6.61V3.234h8.157v8.156Z"/></svg> Похожие</a>
+                        </div>
+                    </div>
+                    <div class="section-product-top__right">
+                        <div class="section-product-top__info">
+                            <div class="product-id">ID: 4545655</div>
+                            <a href="#" class="section-product-top__link"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2 7.2H3v1.2h7.2V7.2Zm0-2.4H3V6h7.2V4.8Zm2.4 4.8V7.2h-1.2v2.4H9v1.2h2.4v2.4h1.2v-2.4H15V9.6h-2.4ZM3 10.8h4.8V9.6H3v1.2Z" stroke="none"/></svg>Добавить к сравнению</a>
+                            
+                            <div class="product-share">
+                                <a href="#" class="section-product-top__link product-share__toggle"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 11.448c-.456 0-.864.18-1.176.462L7.146 9.42c.03-.138.054-.276.054-.42 0-.144-.024-.282-.054-.42l4.23-2.466A1.798 1.798 0 0 0 14.4 4.8c0-.996-.804-1.8-1.8-1.8s-1.8.804-1.8 1.8c0 .144.024.282.054.42l-4.23 2.466A1.798 1.798 0 0 0 3.6 9a1.798 1.798 0 0 0 3.024 1.314l4.272 2.496c-.03.126-.048.258-.048.39 0 .966.786 1.752 1.752 1.752s1.752-.786 1.752-1.752-.786-1.752-1.752-1.752Z" stroke="none"/></svg>Поделиться</a>
+                                
+                                <div class="product-share__content">
+                                    <div class="product-share__title">Поделиться</div>
+                                    <div class="product-share__links">
+                                        <a href="#" class="product-share__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.489.003 10.218 0h3.564l.73.003.914.01.433.007.418.011.403.014.388.016.374.021.36.025.345.03.333.033c1.74.196 2.933.616 3.833 1.516.9.9 1.32 2.092 1.516 3.833l.034.333.029.346.025.36.02.373.025.588.012.41.013.644.009.915.004.98-.001 3.313-.003.73-.01.914-.007.433-.011.418-.014.403-.016.388-.021.374-.025.36-.03.345-.033.333c-.196 1.74-.616 2.933-1.516 3.833-.9.9-2.092 1.32-3.833 1.516l-.333.034-.346.029-.36.025-.373.02-.588.025-.41.012-.644.013-.915.009-.98.004-3.313-.001-.73-.003-.914-.01-.433-.007-.418-.011-.403-.014-.388-.016-.374-.021-.36-.025-.345-.03-.333-.033c-1.74-.196-2.933-.616-3.833-1.516-.9-.9-1.32-2.092-1.516-3.833l-.034-.333-.029-.346-.025-.36-.02-.373-.025-.588-.012-.41-.013-.644-.009-.915L0 13.53l.001-3.313.003-.73.01-.914.007-.433.011-.418.014-.403.016-.388.021-.374.025-.36.03-.345.033-.333c.196-1.74.616-2.933 1.516-3.833.9-.9 2.092-1.32 3.833-1.516l.333-.034.346-.029.36-.025.373-.02.588-.025.41-.012.644-.013.915-.009ZM6.79 7.299H4.05c.13 6.24 3.25 9.99 8.72 9.99h.31v-3.57c2.01.2 3.53 1.67 4.14 3.57h2.84c-.78-2.84-2.83-4.41-4.11-5.01 1.28-.74 3.08-2.54 3.51-4.98h-2.58c-.56 1.98-2.22 3.78-3.8 3.95v-3.95H10.5v6.92c-1.6-.4-3.62-2.34-3.71-6.92Z" fill="#4A76A8"/></svg></a>
+                                        <a href="#" class="product-share__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.357c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.989 24 12Z" fill="#1877F2"/></svg></a>
+                                        <a href="#" class="product-share__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61ZM12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.628 9.628 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12a6.076 6.076 0 0 0 8.4 5.607 6.02 6.02 0 0 0 1.97-1.329 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12" fill="#FFA930"/></svg></a>
+                                        <a href="#" class="product-share__link"><svg width="24" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.953 2.324a10 10 0 0 1-2.825.775A4.958 4.958 0 0 0 23.291.376c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 5.849 4.067 3.884 1.64.916A4.822 4.822 0 0 0 .974 3.39c0 1.71.87 3.213 2.188 4.096A4.904 4.904 0 0 1 .934 6.87v.06a4.923 4.923 0 0 0 3.946 4.828 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.416 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.21c9.053 0 13.998-7.497 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0 0 24 2.344l-.047-.02Z" fill="#1DA1F2"/></svg></a>
+                                        <a href="#" class="product-share__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.415 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.19-.008-.38-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347h.001Zm-5.422 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884Zm8.413-18.297A11.815 11.815 0 0 0 11.993 0C5.438 0 .103 5.335.1 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413Z" fill="#25D366"/></svg></a>
+                                        <a href="#" class="product-share__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0a12 12 0 1 0 .112 24 12 12 0 0 0-.112-24Zm4.962 7.224c.1-.002.321.023.465.14.096.083.157.2.171.325.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635Z" fill="#08C"/></svg></a>
+                                    </div>
+                                    <div class="product-share__input">
+                                        <input type="text" class="form-input" readonly value="bit.ly/ewpcjd" id="copyInput">
+                                        <a href="#" class="product-share__input-copy"  onclick="myCopy();return false;"><svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 4H8c-1.1 0-2 .9-2 2v14h2V6h12V4Zm3 4H12c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2Zm0 16H12V10h11v14Z" /></svg></a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="section-product-top__info-2">
+                            <div class="product-rating">
+                                <div class="product-rating__stars">
+                                    <div class="stars-2">
+                                        <span style="width: 90%"></span>
+                                    </div>
+                                    <a href="#" class="product-rating__stars-toggle"><svg width="8" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m2 2.4 2 2 2-2 .8.4L4 5.6 1.2 2.8l.8-.4Z"/></svg></a>
+                                </div>
+                                <div class="product-rating__info">1298 отзывов</div>
+                            </div>
+                            <a href="#" class="section-product-top__link section-product-top__link-2"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1.688v1.687M4.5 9.563c0-2.813.563-6.188 4.5-6.188 3.938 0 4.5 3.375 4.5 6.188 0 2.812 1.688 4.5 1.688 4.5H2.812S4.5 12.374 4.5 9.563Zm6.75 4.5s0 2.25-2.25 2.25-2.25-2.25-2.25-2.25h4.5Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Снижение цены</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product">
+                    <div class="product-top">
+                        <div class="product-top__left">   
+                            <div class="product-top__left-col">
+                                <div class="product-images">
+                                    <div class="slider-photos js-slider-photos">                                
+                                        <div class="slider-photos__slide">
+                                            <a href="img/products/image-slider-product-lg-01.jpg" class="slider-photos__item"  data-fancybox="product-images">
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/products/image-slider-product-lg-01.jpg" alt="" class="lazyload">
+                                            </a>
+                                        </div>
+                                        <div class="slider-photos__slide">
+                                            <a href="img/products/image-slider-product-lg-02.jpg" class="slider-photos__item"  data-fancybox="product-images">
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/products/image-slider-product-lg-02.jpg" alt="" class="lazyload">
+                                            </a>
+                                        </div>
+                                        <div class="slider-photos__slide">
+                                            <a href="img/products/image-slider-product-lg-01.jpg" class="slider-photos__item"  data-fancybox="product-images">
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/products/image-slider-product-lg-01.jpg" alt="" class="lazyload">
+                                            </a>
+                                        </div>
+                                        <div class="slider-photos__slide">
+                                            <a href="img/products/image-slider-product-lg-02.jpg" class="slider-photos__item"  data-fancybox="product-images">
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/products/image-slider-product-lg-02.jpg" alt="" class="lazyload">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product__btns">
+                                        <a href="#" class="product__btn"><svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23 19c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2v-8c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v8Zm-4-4-6-3.27v6.53L19 15Z"/></svg>Видео</a>
+                                    </div>
+                                    <div class="product__labels">
+                                        <div class="product__label">БЕСТселлер</div>
+                                    </div>
+                                </div>     
+                            </div>
+                            <div class="product-top__left-col">
+                                <div class="product-info-tabs">
+                                    <ul class="product-info-tabs-nav">
+                                        <li class="product-info-tabs-nav__item active" data-tab="info-tab-1">Слеб из партии АБ</li>
+                                        <li class="product-info-tabs-nav__item" data-tab="info-tab-2">Партия АБ <span>(56.9 м<sup class="m2">2</sup>)</span></li>
+                                    </ul>
+                                    <div class="product-info-tabs-content active" data-tab="info-tab-1">
+                                        <ul class="product-info">
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Номер слеба</span>
+                                                    <span class="product-info__item-value">8</span>
+                                                </li>
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Размер, ДxШxТ, мм</span>
+                                                    <span class="product-info__item-value">2770<span>x</span>1150<span>x</span>20</span>
+                                                </li>
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Количество, шт.</span>
+                                                    <span class="product-info__item-value">1</span>
+                                                </li>
+
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Площадь 1 слеба, м<sup class="m2">2</sup></span>
+                                                    <span class="product-info__item-value">3.19</span>
+                                                </li>
+
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Обработка</span>
+                                                    <span class="product-info__item-value">Полировка</span>
+                                                </li>
+
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Cтрана</span>
+                                                    <span class="product-info__item-value"><img src="img/flag-italy.svg" alt="">Италия</span>
+                                                </li>
+
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Материал</span>
+                                                    <span class="product-info__item-value">Гранит</span>
+                                                </li>
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Цветовая палитра</span>
+                                                    <span class="product-info__item-value">
+                                                        <div class="product-info__item-color">
+                                                            <span style="background: #80919E;"></span>
+                                                            <span style="background: #CACDC4;"></span>
+                                                            <span style="background: #F1F1F1;"></span>
+                                                        </div>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                    <div class="product-info-tabs-content" data-tab="info-tab-2">
+                                        <ul class="product-info product-info-2">
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">В наличии</span>
+                                                    <span class="product-info__item-value">50.37 м<sup class="m2">2</sup></span>
+                                                    <span class="product-info__item-value">20 шт</span>
+                                                </li>
+
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">В резерве</span>
+                                                    <span class="product-info__item-value">1.19 м<sup class="m2">2</sup></span>
+                                                    <span class="product-info__item-value">1 шт</span>
+                                                </li>
+
+                                                <li class="product-info__item">
+                                                    <span class="product-info__item-title">Доступно</span>
+                                                    <span class="product-info__item-value">29 м<sup class="m2">2</sup></span>
+                                                    <span class="product-info__item-value">19 шт</span>
+                                                </li>
+
+                                            </ul>                                        
+                                        <div class="product-info-btn">
+                                            <a href="#" class="btn btn_sm btn_border-2 btn_font-9">Купить всю партию</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-top__left-col product-top__left-col-2">
+                                <div class="slider-slab-wrapper">
+                                <div class="slider-slab js-slider-slab">
+                                    <div class="slider-slab__slide">
+                                        <a href="#" class="slider-slab-item active">
+                                            <img src="img/products/image-slider-slab.png" alt="" class="slider-slab-item__img">
+                                            <div class="slider-slab-item__text">
+                                                <b>Слеб № 1</b><br>
+                                                3300 x 1970 x 20<br>
+                                                1 шт. – 6.50 м<sup class="m2">2</sup>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="slider-slab__slide">
+                                        <a href="#" class="slider-slab-item">
+                                            <img src="img/products/image-slider-slab.png" alt="" class="slider-slab-item__img">
+                                            <div class="slider-slab-item__text">
+                                                <b>Слеб № 2</b><br>
+                                                3300 x 1970 x 20<br>
+                                                1 шт. – 6.50 м<sup class="m2">2</sup>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="slider-slab__slide">
+                                        <a href="#" class="slider-slab-item">
+                                            <img src="img/products/image-slider-slab.png" alt="" class="slider-slab-item__img">
+                                            <div class="slider-slab-item__text">
+                                                <b>Слеб № 3</b><br>
+                                                3300 x 1970 x 20<br>
+                                                1 шт. – 6.50 м<sup class="m2">2</sup>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                                    <div class="slider-slab__prev"></div>
+                                    <div class="slider-slab__next"></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="product-top__right">
+                            <div class="product-price-block product-price-block-tabs">
+                                <div class="product-price-block__top">
+                                    <div class="product-price-block__tabs ">
+                                        <div class="product-price-block-tabs__top">
+                                            <div class="product-price-block-tabs__title">Супер цена</div>
+                                            <ul class="product-price-block-tabs-nav">
+                                                <li class="product-price-block-tabs-nav__item active" data-tab="product-currency-1">РУБЛЬ</li>
+                                                <li class="product-price-block-tabs-nav__item" data-tab="product-currency-2">USD</li>
+                                                <li class="product-price-block-tabs-nav__item" data-tab="product-currency-3">EURO</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-price-block-tabs-content active" data-tab="product-currency-1">
+                                            <div class="product-price-block__price">
+                                                <div class="product-price-block__price-new">
+                                                    <span class="product-price-block__price-value">819 249</span> <span class="b-rub">P</span> / м<sup class="m2">2</sup>
+                                                </div>
+                                                <div class="product-price-block__price-old">
+                                                    919 876 <span class="b-rub">P</span> / м<sup class="m2">2</sup>
+                                                </div>
+                                            </div>
+                                            <div class="product-price-block__discount-block">
+                                                <div class="product-price-block__discount">
+                                                    <div class="product-price-block__discount-value">-25%</div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="product-price-block-tabs-content" data-tab="product-currency-2">
+                                            <div class="product-price-block__price">
+                                                <div class="product-price-block__price-new">
+                                                    <span class="product-price-block__price-value">249 </span> $ / м<sup class="m2">2</sup>
+                                                </div>
+                                                <div class="product-price-block__price-old">
+                                                    343 $ / м<sup class="m2">2</sup>
+                                                </div>
+                                            </div>
+                                            <div class="product-price-block__discount-block">
+                                                <div class="product-price-block__discount">
+                                                    <div class="product-price-block__discount-value">-25%</div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="product-price-block-tabs-content" data-tab="product-currency-3">
+                                            <div class="product-price-block__price">
+                                                <div class="product-price-block__price-new">
+                                                    <span class="product-price-block__price-value">249 </span> € / м<sup class="m2">2</sup>
+                                                </div>
+                                                <div class="product-price-block__price-old">
+                                                    343 € / м<sup class="m2">2</sup>
+                                                </div>
+                                            </div>
+                                            <div class="product-price-block__discount-block">
+                                                <div class="product-price-block__discount">
+                                                    <div class="product-price-block__discount-value">-25%</div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-price-block__bottom">
+                                    
+                                    <div class="product-price-block__slab-block">
+                                        <div class="product-price-block-tabs-content active" data-tab="product-currency-1">
+                                            <div class="product-price-block__slab">
+                                                <div class="product-price-block__slab-title">Цена за слеб (с учетом скидки): </div>
+                                                <div class="product-price-block__slab-price">873 249 <span class="b-rub">P</span></div> 
+                                            </div>
+                                        </div>
+                                        <div class="product-price-block-tabs-content" data-tab="product-currency-2">
+                                            <div class="product-price-block__slab">
+                                                <div class="product-price-block__slab-title">Цена за слеб (с учетом скидки): </div>
+                                                <div class="product-price-block__slab-price">1 249 $</div>                                                
+                                            </div>
+                                        </div>
+                                        <div class="product-price-block-tabs-content" data-tab="product-currency-3">
+                                            <div class="product-price-block__slab">
+                                                <div class="product-price-block__slab-title">Цена за слеб (с учетом скидки): </div>
+                                                <div class="product-price-block__slab-price">3 249 €</div>                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-price-block__btns">
+                                        <div class="product-price-block__btns-cart">
+                                            <div class="product-price-block__btns-tocart">
+                                                <a href="#" class="btn js-tocart-2"><svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 21c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2ZM5 5v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H11.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 24 7H9.21l-.94-2H5Zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2Z"/></svg>В КОРЗИНУ</a>
+                                            </div>
+                                            <div class="product-price-block__btns-incart">
+                                                <a href="#" class="btn btn_green btn_incart">В КОРЗИНЕ<span>Перейти</span></a>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="#" class="product-favorite"><svg width="26" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.679 1.688c-3.804 0-5.679 3.75-5.679 3.75s-1.875-3.75-5.679-3.75c-3.091 0-5.54 2.586-5.57 5.672-.065 6.406 5.08 10.962 10.722 14.79a.937.937 0 0 0 1.054 0c5.64-3.828 10.787-8.384 10.723-14.79-.032-3.086-2.48-5.673-5.571-5.673Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                                    </div>  
+                                    
+                                    <div class="product-price-block__saler">
+                                        Продавец: <span class="product-price-block__saler-title">Lichi Stone</span>
+                                        <span class="tooltip-2 js-tooltip" title="ООО “Личи Стоун”, ИНН 771662542, КПП 21201222201, ОКВЭД 017.17"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1.828A7.172 7.172 0 1 0 16.172 9 7.18 7.18 0 0 0 9 1.828Zm0 13.5A6.328 6.328 0 1 1 15.328 9 6.336 6.336 0 0 1 9 15.328Zm.984-2.953a.422.422 0 0 1-.421.422H9a.422.422 0 0 1-.422-.422V8.859h-.14a.422.422 0 0 1 0-.843H9a.422.422 0 0 1 .422.421v3.516h.14a.422.422 0 0 1 .422.422ZM8.156 5.906a.703.703 0 1 1 1.407 0 .703.703 0 0 1-1.407 0Z"/></svg></span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+  
+    </main>
+    <!-- BEGIN FOOTER -->
+    <footer  class="footer">
+        <div class="wrapper">
+            <div class="footer__top d-flex justify-content-between">
+                <div class="footer__left">
+                    <a href="#" class="footer__logo">
+                        <img src="img/logo.svg" alt="" width="160" height="52">
+                    </a>
+                    <div class="footer-social">
+                        <div class="footer-social__title">Подписывайся!</div>
+                        <ul class="social">
+                            <li class="social-item">
+                                <a href="#" class="social-item__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.376 3.004 14.04 3c-2.625 0-4.322 1.75-4.322 4.46v2.057h-2.35a.369.369 0 0 0-.367.37v2.979c0 .204.165.37.367.37h2.35v7.517c0 .205.165.37.368.37h3.065a.368.368 0 0 0 .368-.37v-7.518h2.747a.368.368 0 0 0 .368-.37V9.887a.371.371 0 0 0-.367-.37h-2.748V7.774c0-.838.198-1.263 1.284-1.263h1.574a.368.368 0 0 0 .367-.37V3.373a.369.369 0 0 0-.367-.37Z" /></svg></a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-item__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.48 2A5.526 5.526 0 0 1 22 7.52v8.96A5.526 5.526 0 0 1 16.48 22H7.52A5.525 5.525 0 0 1 2 16.48V7.52A5.526 5.526 0 0 1 7.52 2h8.96Zm3.746 14.48V7.52a3.75 3.75 0 0 0-3.745-3.745H7.519a3.749 3.749 0 0 0-3.744 3.744v8.962a3.749 3.749 0 0 0 3.744 3.744h8.962a3.75 3.75 0 0 0 3.745-3.744ZM12 7c2.757 0 5 2.243 5 5s-2.243 5-5 5-5-2.243-5-5 2.243-5 5-5Zm0 8.278A3.282 3.282 0 0 0 15.278 12 3.282 3.282 0 0 0 12 8.722 3.282 3.282 0 0 0 8.722 12 3.282 3.282 0 0 0 12 15.278Zm5.417-9.945c.33 0 .652.133.884.366.233.232.366.555.366.884 0 .329-.133.651-.366.884a1.262 1.262 0 0 1-.884.366 1.26 1.26 0 0 1-.883-.366 1.26 1.26 0 0 1-.367-.884 1.255 1.255 0 0 1 1.25-1.25Z"/></svg></a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-item__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.76 5.907a8.069 8.069 0 0 1-2.327.641 4.085 4.085 0 0 0 1.782-2.25 8.152 8.152 0 0 1-2.576.988A4.034 4.034 0 0 0 15.681 4a4.062 4.062 0 0 0-4.054 4.07c0 .318.035.63.105.927a11.493 11.493 0 0 1-8.355-4.253c-.35.6-.548 1.3-.548 2.046 0 1.412.716 2.659 1.802 3.388a4.041 4.041 0 0 1-1.836-.511v.05a4.07 4.07 0 0 0 3.252 3.992c-.34.092-.698.143-1.069.143-.261 0-.515-.026-.763-.076a4.058 4.058 0 0 0 3.786 2.828 8.111 8.111 0 0 1-5.034 1.74c-.327 0-.65-.02-.967-.056a11.424 11.424 0 0 0 6.214 1.831c7.457 0 11.533-6.203 11.533-11.582l-.014-.527a8.113 8.113 0 0 0 2.028-2.103Z"/></svg></a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-item__link"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.448 5c2.516 0 3.833.348 4.546 1.202.717.857.77 2.17.77 4.076v3.444c0 2.184-.341 3.445-1.143 4.217-.782.754-1.991 1.061-4.173 1.061H7.316C2.822 19 2 17.223 2 13.722v-3.444c0-1.807 0-3.112.693-3.999C3.403 5.371 4.743 5 7.316 5h9.132Zm-5.906 9.657 4.147-2.181a.642.642 0 0 0-.002-1.139L10.541 9.17a.634.634 0 0 0-.625.021.643.643 0 0 0-.307.548v4.349a.643.643 0 0 0 .638.642.635.635 0 0 0 .295-.073Z"/></svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__right">
+                    <div class="y-row">
+                        <div class="y-col y-col-3">
+                            <ul class="f-nav">
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link"><b>Партнерам</b></a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link"><b>Реклама</b></a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link"><b>Новости</b></a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link"><b>Вакансии</b></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="y-col y-col-4">
+                            <ul class="f-nav">
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link"><b>О компании</b></a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link">Контакты</a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link">Оплата</a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link">Доставка</a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link">Правила</a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link">Вопросы / Ответы</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="y-col y-col-5">
+                            <ul class="f-nav">
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link"><b>Правовая информация</b></a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link">Политика конфиденциальности</a>
+                                </li>
+                                <li class="f-nav-item">
+                                    <a href="#" class="f-nav-item__link">Пользовательское соглашение</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="footer__contact">
+                <div class="footer__contact-item">Служба поддержки</div>
+                <div class="footer__contact-item">
+                    <a href="tel:88007557575" class="footer__contact-phone">
+                        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.672 3.676a3.353 3.353 0 0 1 2.647 2.642M9.672 1c1.36.15 2.628.759 3.596 1.724A6.016 6.016 0 0 1 15 6.312m-.67 5.338v2.007a1.336 1.336 0 0 1-1.461 1.338 13.28 13.28 0 0 1-5.785-2.054 13.058 13.058 0 0 1-4.02-4.014 13.222 13.222 0 0 1-2.059-5.8A1.336 1.336 0 0 1 2.34 1.67h2.01a1.342 1.342 0 0 1 1.341 1.15c.085.643.243 1.273.47 1.88a1.336 1.336 0 0 1-.302 1.412l-.851.85a10.713 10.713 0 0 0 4.021 4.013l.851-.85a1.341 1.341 0 0 1 1.415-.3 8.62 8.62 0 0 0 1.883.468 1.34 1.34 0 0 1 1.153 1.358Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        8 800 755 75 75
+                    </a>
+                </div>
+                <div class="footer__contact-item footer__contact-item_2">Звонок по России бесплатно</div>
+                <div class="footer__contact-item">Режим работы с 9:00 до 20:00</div>
+            </div>
+            <div class="footer__copy">© 1999-2021 ООО “ЭНДСТОУН”. Все права защищены.</div>            
+        </div>  
+    </footer>
+    <!-- FOOTER EOF   -->
+    
+        <a href="#top" class="scroll-top scroll"><svg width="14" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.094 9.063c.312.312.781.28 1.093 0L5.75 5.28v8.969c0 .438.344.75.75.75h1c.438 0 .75-.313.75-.75V5.281l3.594 3.782a.814.814 0 0 0 1.094 0l.687-.688c.281-.313.281-.781 0-1.063L7.531 1.22c-.281-.282-.75-.282-1.062 0L.406 7.312c-.281.282-.281.75 0 1.063l.688.688Z" fill="#fff"/></svg></a>
+        
+        <div class="cookie">
+            Пользуясь настоящим веб-сайтом, вы даете свое согласие на использование файлов cookies. <a href="#">Узнать подробнее</a>
+            <a href="#" class="cookie__close"><svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m8.17 6.981 5.609-5.61a.814.814 0 0 0-1.15-1.15l-5.61 5.61L1.409.218a.814.814 0 0 0-1.15 1.15l5.61 5.613-5.61 5.61a.814.814 0 1 0 1.15 1.15l5.61-5.61 5.61 5.61a.814.814 0 0 0 1.15-1.15l-5.61-5.61Z"/></svg></a>
+        </div>
+
+    </div>
+    
+    <div class="hidden">
+        <div class="popup" id="popup-city">
+            <div class="popup__title">Выберите свой город</div>
+            <form class="form">
+                <div class="y-row">
+                    <div class="y-col y-col-12 form-col">
+                        <input type="text" name="city" id="input-city" class="form-input" placeholder="Ваш город...">
+                    </div>
+                </div>
+            </form>
+            
+            <div class="city-list-main">            
+                <ul class="city-list">
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link active">Москва <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m11.6 18.6-4.2-4.2L6 15.8l5.6 5.6 12-12L22.2 8 11.6 18.6Z"/></svg></a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Екатеринбург</a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Пермь</a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Казань</a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Краснодар</a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Санкт-Петербург</a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Нижний Новгород</a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Новосибирск</a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Челябинск</a>
+                </li>
+                <li class="city-list-item">
+                    <a href="#" class="city-list-item__link">Самара</a>
+                </li>
+            </ul>            
+                <a href="#" class="link-city-more js-link-city-more" data-show="Показать все города" data-hide="Скрыть все города">Показать все города</a>
+                <div class="city-more js-city-more">
+                <div class="city-more__inner">    
+                    <div class="city-more__flex">         
+                    <div class="city-more__item">
+                        <ul class="city-list">
+                            <li class="city-list-item city-list-item_title">А</li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Абакан</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Абинск</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Азов</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Аксай</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Алексин</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Алушта</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Анапа</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Ангарск</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Армавир</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Архангельск</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Ачинск</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="city-more__item">
+                        <ul class="city-list">
+                            <li class="city-list-item city-list-item_title">Б</li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Балаково</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Барнаул</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Батайск</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Белая Калитва</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Белгород</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Белово</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Бердск</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Березовский</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Бийск</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Благовещенск</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Брянск</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="city-more__item">
+                        <ul class="city-list">
+                            <li class="city-list-item city-list-item_title">В</li>                           
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Великие Луки</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Верхний Тагил</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Верхняя Пышма</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="city-more__item">
+                        <ul class="city-list">
+                            <li class="city-list-item city-list-item_title">Г</li>                           
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Горячий Ключ</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Грозный</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Грязи</a>
+                            </li>
+                        </ul>
+                    </div>
+                        <div class="city-more__item">
+                        <ul class="city-list">
+                            <li class="city-list-item city-list-item_title">Д</li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Абакан</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Абинск</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Азов</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Аксай</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Алексин</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Алушта</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Анапа</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Ангарск</a>
+                            </li>
+                             <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Армавир</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Архангельск</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Ачинск</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="city-more__item">
+                        <ul class="city-list">
+                            <li class="city-list-item city-list-item_title">Е</li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Балаково</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Барнаул</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Батайск</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Белая Калитва</a>
+                            </li>
+                            <li class="city-list-item">
+                                <a href="#" class="city-list-item__link">Белгород</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="city-list-search">
+                <ul class="city-list">
+                    <li class="city-list-item">
+                        <a href="#" class="city-list-item__link">Абакан</a>
+                    </li>
+                    <li class="city-list-item">
+                        <a href="#" class="city-list-item__link">Балаково</a>
+                    </li>
+                    <li class="city-list-item">
+                        <a href="#" class="city-list-item__link">Барнаул</a>
+                    </li>
+                    <li class="city-list-item">
+                        <a href="#" class="city-list-item__link">Батайск</a>
+                    </li>
+                    <li class="city-list-item">
+                        <a href="#" class="city-list-item__link">Избераш</a>
+                    </li>
+                    <li class="city-list-item">
+                        <a href="#" class="city-list-item__link">Хабаровск</a>
+                    </li>
+                </ul>        
+            </div>
+            
+        </div>
+        
+        <div class="popup" id="popup-auth">
+            <div class="popup__title">Личный кабинет</div>
+            <div class="popup__text">Войдите в личный кабинет или зарегистрируйтесь</div>
+            <div class="form-auth-wrapper">
+                <form class="form form-auth">
+                    <div class="y-row">
+                        <div class="y-col y-col-12 form-col">
+                            <label class="form-label">Введите номер телефона:</label>
+                            <input type="tel" name="phone" class="form-input input-phone" placeholder="+7">
+                        </div>
+                        <div class="y-col y-col-12 form-col  form-auth__btn">
+                            <label class="form-checkbox form-checkbox_small">
+                                <input type="checkbox" name="agree" value="1">
+                                <span>Я соглашаюсь с <a href="#">Политикой конфиденциальности</a></span>
+                            </label>
+                        </div>
+                        <div class="y-col y-col-12 text-center form-auth__btn">
+                            <button class="btn js-get-code">ПОЛУЧИТЬ КОД В СМС</button>
+                        </div>
+                        <div class="y-col y-col-12 form-auth__code">
+                            <label class="form-label">Введите код из SMS :</label>
+                            <input type="text" name="code" class="form-input form-input__code">
+                            <div class="form-auth__timer  form-auth__timer-count">Отправить код ещё раз через <span class="form-auth__timer-time">60</span> сек.</div>
+                            <div class="form-auth__timer form-auth__timer-finish"><a href="#">Отправить код ещё раз</a></div>
+                        </div>
+                    </div>
+                </form>
+            </div>            
+        </div> 
+    </div>
+
+    <!-- BODY EOF   -->
+     
+    <script src="js/jquery-3.6.0.min.js?ver1.0"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js?ver1.0"></script>
+    <script src="js/slick.min.js?ver1.0"></script>
+    <script src="js/jquery.fancybox.min.js?ver1.0"></script>
+    <script src="js/jquery.validate.min.js?ver1.0"></script>
+    <script src="js/jquery.maskedinput.min.js?ver1.0"></script>
+    <script src="js/lazyload.min.js?ver1.0"></script>
+    <script src="js/jquery.overlayScrollbars.min.js?ver1.0"></script>    
+    <script src="js/nouislider.min.js?ver1.0"></script>
+    <script src="js/jquery.matchHeight-min.js?ver1.0"></script>
+    <script src="js/tooltipster.bundle.min.js?ver1.0"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

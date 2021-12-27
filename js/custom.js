@@ -616,6 +616,8 @@ $(document).ready(function(){
         $(this).parents('.product-tabs').find('.product-tabs-content[data-tab="'+$(this).attr('data-tab')+'"]').addClass('active');
         $('.js-slider-photos-2-nav').slick('resize');
         $('.js-slider-photos-2').slick('resize');
+        $('.js-slider-photos-2').slick('setPosition', 0);
+        $('.js-slider-photos-2-nav').slick('setPosition', 0);
         return false;
     });    
     
@@ -863,7 +865,11 @@ $(document).ready(function(){
     $('.calc__minus').click(function(){ 
         var val=parseInt($(this).parent('.calc').find('.calc__input').val());
         var new_val=val-1;
-        if(new_val<1)new_val=1;
+        if(new_val<1)
+        {
+            new_val=1;
+            $(this).parents('.added').removeClass('added');
+        }
         $(this).parent('.calc').find('.calc__input').val(new_val);
         return false;  
     })
