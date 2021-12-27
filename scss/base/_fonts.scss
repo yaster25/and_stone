@@ -92,3 +92,16 @@
     font-display: swap;
 }
 
+
+.b-rub{
+    position: relative;
+    &:before{
+            content: "";
+            position: absolute;
+            top: 65%;
+            left: 0;
+            right: 1px;
+            height: 1px;
+            background: currentColor;
+    }
+}
