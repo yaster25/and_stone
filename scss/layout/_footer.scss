@@ -157,7 +157,19 @@
     .footer__right{
         width: auto;
     }
-    
+    .footer{
+        padding-bottom: 80px;
+    }
+    .main-wrapper_product{
+        .footer{
+            padding-bottom: 165px;
+        }
+        
+    }
+    .scroll-top{
+        bottom: 80px;
+        right: 10px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -168,13 +180,8 @@
     .footer__logo{
         margin-bottom: 10px;
     }
-    .footer{
-        padding-bottom: 80px;
-    }
-    .scroll-top{
-        bottom: 80px;
-        right: 10px;
-    }
+    
+    
     .footer__right{
         width: 100%;
         padding-top: 15px;

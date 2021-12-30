@@ -63,6 +63,10 @@ textarea {
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
 	-webkit-appearance: none;
+    font-size: 100%;
+}
+select{
+   font-size: 100%; 
 }
 
 input[type="button"],
@@ -126,3 +130,5 @@ input:disabled{
 	clear: both;
 	visibility: hidden;
 }
+
+
