@@ -6345,7 +6345,7 @@ line-height: 22px;
             background: #FFFFFF;
             border: 1px solid $color-light-grey;
             border-radius: 25px;
-            padding: 28px 28px;
+            padding: 28px 25px;
             height: 100%;
             cursor: pointer;
             transition: $default-transition;
@@ -6359,6 +6359,8 @@ line-height: 22px;
             display: block;
             margin-bottom: 24px;
             transition: $default-transition;
+            @include flexbox;
+            @include align-items(center);
             &_sm{
                 font-size: 14px;
                     line-height: 17px;
@@ -6369,8 +6371,26 @@ line-height: 22px;
                     fill:currentColor;
                     display: inline-block;
                     vertical-align: middle;
-                    margin: -3px 14px 0 0;
-                }
+                    margin: -3px 18px 0 0;
+                flex: none;
+            }
+        }
+        
+        &__price{
+            flex:none;
+            color: $color-orange;
+            font-weight: bold;
+                font-size: 10px;
+                line-height: 11px;
+                margin-left: auto;
+            white-space: nowrap;
+            svg{
+                display:inline-block;
+                vertical-align: middle;
+                margin: -3px 4px 0 0;
+                fill:currentClor;
+                
+            }
         }
 
         &__list{
@@ -7110,6 +7130,15 @@ line-height: 22px;
     }
 }
 
+.radio-tabs-payment{
+    .y-col-4{
+        width:30%;       
+    }
+    .y-col-6{
+        width: 40%;    
+    }
+}
+
 // col 0 15px 30px
 // padding inside 30px
 @media screen and (max-width: 1199px) {
@@ -7363,12 +7392,20 @@ line-height: 22px;
     .radio-tabs-item+label{
         padding: 20px;
     }
-    .radio-tabs-item__title_sm{
-        white-space: nowrap;
-        svg{
-            margin-right:4px;
-        }
+    
+    .radio-tabs .y-col{
+        padding-bottom: 20px;
     }
+    .radio-tabs .y-row{
+        margin-bottom: -20px;
+    }
+    .radio-tabs-payment .y-col-4{
+        width: 50%;
+    }
+    .radio-tabs-payment .y-col-6{
+        width: 50%;
+    }
+    
     .checkout-radios-item__radio{
         margin-left: 0;
     }
@@ -8342,6 +8379,16 @@ line-height: 22px;
         line-height: 24px;
         margin-bottom: 30px;
     }
+
+    .main-wrapper_nosearch{
+        padding-top: 107px;
+        .header__search{
+            display: none;
+        }
+        .header{
+            height: 107px;
+        }
+    }
 }
 
 // margin-bottom 40px = 30px
@@ -8971,7 +9018,8 @@ line-height: 22px;
     .form-input_lg{
         font-size: 14px;
         line-height: 17px;
-        padding: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .form-input-block__info{
         padding: 5px 15px 0;

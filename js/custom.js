@@ -1205,16 +1205,6 @@ $(document).ready(function(){
         $(this).next('.checkout-toggle__content').slideToggle();
     });
     
-    $('input[name="checkout-delivery-height"]').change(function() {     
-        if($(this).attr('checked')){
-            $(this).parents('.checkout-delivery-height').find('input[type="text"]').attr('disabled', false);
-        }else{
-             $(this).parents('.checkout-delivery-height').find('input[type="text"]').attr('disabled', true);
-        }
-        
-        
-    });
-    
     $(".register-profile-card-photo__link").click(function(e) {
         $("#imageUpload").click();
         return false;
