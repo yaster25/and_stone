@@ -38,7 +38,7 @@ $(document).ready(function(){
     });
 
 	function showDiv() {
-		if ($(window).scrollTop() > 200) {			
+		if ($(window).scrollTop() > 180) {			
 			$("#header").addClass('fixed');
 			$("body").addClass('body-fixed');
 		}else {
@@ -919,11 +919,13 @@ $(document).ready(function(){
     $(document).on('click', '.calc__minus', function(){ 
         var val=parseInt($(this).parent('.calc').find('.calc__input').val());
         var new_val=val-1;
-        if(new_val<1)
+        if(new_val<2)
         {
             new_val=1;
+            $(this).addClass('disabled');
             $(this).parents('.added').removeClass('added');
         }
+        $(this).parent('.calc').find('.calc__plus').removeClass('disabled');    
         $(this).parent('.calc').find('.calc__input').val(new_val);   
         
         return false;  
@@ -932,7 +934,14 @@ $(document).ready(function(){
     $(document).on('click', '.calc__plus', function(){ 
         var val=parseInt($(this).parent('.calc').find('.calc__input').val());
         var new_val=val+1;
-        if(new_val<1)new_val=1;
+        if($(this).parent('.calc').attr('data-max')){
+            if(new_val==$(this).parent('.calc').attr('data-max')){
+                $(this).addClass('disabled');
+            }
+        }
+        
+        
+        $(this).parent('.calc').find('.calc__minus').removeClass('disabled');        
         $(this).parent('.calc').find('.calc__input').val(new_val);        
         return false;  
     })
@@ -1138,6 +1147,109 @@ $(document).ready(function(){
         return false;
     });
     
+    $('.cart-price-block-tabs-nav__item').on('click', function(event) {  
+        $(this).parents('.cart-price-block-tabs').find('.cart-price-block-tabs-nav__item').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.cart-price-block-tabs').find('.cart-price-block-tabs-content').removeClass('active');
+        $(this).parents('.cart-price-block-tabs').find('.cart-price-block-tabs-content[data-tab="'+$(this).attr('data-tab')+'"]').addClass('active');
+        return false;
+    });
+    
+    $('input[name="radio-delivery"]').change(function() {  
+        $(this).parents('.radio-tabs-block').find('.radio-tabs-content').removeClass('active');
+        $(this).parents('.radio-tabs-block').find('.radio-tabs-content[data-tab="'+$(this).attr('id')+'"]').addClass('active');
+        if($(this).attr('id')=='radio-delivery-delivery'){
+            $('.cart-price-block-info__item_pickup').removeClass('active');
+            $('.cart-price-block-info__item_delivery').addClass('active');
+        }
+        if($(this).attr('id')=='radio-delivery-pickup'){
+            $('.cart-price-block-info__item_pickup').addClass('active');
+            $('.cart-price-block-info__item_delivery').removeClass('active');
+        }
+    });
+    
+    $('.checkout-radios-item__radio input').change(function() {         
+        $(this).parents('.checkout-radios').find('.checkout-radios-item__content').removeClass('active');
+        $(this).parents('.checkout-radios-item__radio').next('.checkout-radios-item__content').addClass('active');
+        
+        if($(this).val()=='1'){
+            $('.checkout-toggle_additional').addClass('active');
+        }else{
+            $('.checkout-toggle_additional').removeClass('active');
+        }
+        
+    });
+    
+    $('#sidebar').stickySidebar({
+        topSpacing: 180,
+        bottomSpacing: 30,
+        minWidth: 991
+    });
+    
+    
+    $('.checkout-address-map__toggle').click(function(){
+        if($(this).parents('.checkout-address-map').hasClass('hidden-map')){
+            $(this).parents('.checkout-address-map').removeClass('hidden-map');
+            $(this).text($(this).attr('data-hide'));
+            $(this).next('.checkout-address-map__map').show();
+        }else{
+            $(this).parents('.checkout-address-map').addClass('hidden-map');
+            $(this).text($(this).attr('data-show'));
+            $(this).next('.checkout-address-map__map').hide();
+        }
+        return false;
+    })
+    
+    $('.checkout-toggle__title').click(function(){
+        $(this).toggleClass('not-active');
+        $(this).next('.checkout-toggle__content').slideToggle();
+    });
+    
+    $('input[name="checkout-delivery-height"]').change(function() {     
+        if($(this).attr('checked')){
+            $(this).parents('.checkout-delivery-height').find('input[type="text"]').attr('disabled', false);
+        }else{
+             $(this).parents('.checkout-delivery-height').find('input[type="text"]').attr('disabled', true);
+        }
+        
+        
+    });
+    
+    $(".register-profile-card-photo__link").click(function(e) {
+        $("#imageUpload").click();
+        return false;
+    });
+    function fasterPreview( uploader ) {
+        if ( uploader.files && uploader.files[0] ){                
+            $('#profileImage').css('background-image', "url('" + window.URL.createObjectURL(uploader.files[0]) + "') ")                 
+        }
+    }
+    $("#imageUpload").change(function(){
+        fasterPreview( this );
+    });
+    
+     $('.register-tabs-nav__item').on('click', function(event) {  
+        $(this).parents('.register-tabs').find('.register-tabs-nav__item').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.register-tabs').find('.register-tabs-content').removeClass('active');
+        $(this).parents('.register-tabs').find('.register-tabs-content[data-tab="'+$(this).attr('data-tab')+'"]').addClass('active');
+        return false;
+    });
+    
+    $('.register-address__link').on('click', function(event) {  
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')){
+            $(this).text($(this).attr('data-hide'));
+            $(this).next('.register-address__content').show();
+            $('.register-profile-card__list-delivery').addClass('active');
+        }else{
+            $(this).text($(this).attr('data-show'));
+            $(this).next('.register-address__content').hide();
+            $('.register-profile-card__list-delivery').removeClass('active');
+        }
+       return false;
+    });
+     
     
     
     var ll2 = new LazyLoad({
