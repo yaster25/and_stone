@@ -4939,10 +4939,25 @@ ul {
         padding-right: 40PX;
     }
     &__aside{
-        width: 360px;
-        
+        width: 360px;        
         .btn{
             width: 100%;
+            margin-bottom: 28px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        &-text{
+            font-size: 14px;
+            line-height: 17px;
+            color: $color-black;
+            a{
+                color:$color-orange;
+                text-decoration: underline;
+                &:hover{
+                    color: $color-black;
+                }
+            }
         }
     }
     
@@ -6313,6 +6328,7 @@ line-height: 22px;
             color: $color-light-graphite;
             margin-bottom: 20px;
             z-index: 1;
+            margin-top: 28px;
             span{
                 z-index: -1;
                 position:absolute;
@@ -7066,6 +7082,16 @@ line-height: 22px;
         line-height: 24px;
         color: $color-light-graphite;
         margin-bottom: 20px;
+        &-2{
+            font-size: 18px;
+            line-height: 22px;
+            color: $color-graphite;
+            p{
+                color: $color-light-graphite;
+                font-weight: 400;
+                margin-top: 2px;
+            }
+        }
     }
 }
 
@@ -7138,6 +7164,58 @@ line-height: 22px;
         width: 40%;    
     }
 }
+
+.checkout-account-tabs{
+    &-nav{
+        margin-bottom: 20px;
+        &__item{
+            display:inline-block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 26px;
+            color: #CACAD0;
+            margin-right: 20px;
+            border-bottom: 1px dashed #CACAD0;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:hover{
+                color: $color-orange;
+                border-color: $color-orange;
+            }
+            &.active{
+                font-weight: 900;
+                color: $color-orange;
+                border-bottom: 1px solid $color-orange;
+            }
+        }
+    }
+    &-content{
+        display:none;        
+        &.active{
+            display: block;
+        }
+    }
+}
+
+.text-attention{
+    position:relative;
+    padding-left: 42px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-black;
+    padding-top: 3px;
+    min-height: 21px;
+    svg{
+        fill:$color-orange;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+}
+
 
 // col 0 15px 30px
 // padding inside 30px
@@ -7426,15 +7504,18 @@ line-height: 22px;
         padding-left: 0;
         padding-right: 0;
     }
-    .checkout-date-item {
-        width: calc(20% + 1px);
-        &:nth-child(5) input+label{
-            border-radius: 0 25px 25px 0;
-        }
-        &:nth-child(n+6){
-            display: none;
-        }
+
+    .checkout-date-item input+label{
+        padding-left: 10px;
+        padding-right: 10px;
     }
+    .checkout-date-item input+label .checkout-date-item__month{
+        font-size: 14px;
+    }
+    .checkout-date-item input+label .checkout-date-item__day{
+        font-size: 12px;
+    }
+    
     .checkout-additional{
         padding: 0;
     }
@@ -8326,17 +8407,7 @@ line-height: 22px;
     .cart-single-item .calc{
         margin: 0 auto 2px;
     }
-    .checkout-date-item {
-        width: calc(14.28% + 1px);
-        &:nth-child(n){
-            display: block;
-        }
-    }
-    .checkout-date-item:nth-child(5) input+label{
-        border-radius: 0;
-    }
-    
-
+   
     .section-register{
         @include flex-wrap(wrap);
         &__content{
@@ -8389,6 +8460,14 @@ line-height: 22px;
             height: 107px;
         }
     }
+    
+    .checkout-date-item input+label .checkout-date-item__month{
+        font-size: 18px;
+    }
+    .checkout-date-item input+label .checkout-date-item__day{
+        font-size: 14px;
+    }
+    
 }
 
 // margin-bottom 40px = 30px
@@ -9040,7 +9119,7 @@ line-height: 22px;
         font-size: 14px;
     }
     .checkout-date-item input+label{
-        padding: 12px 15px;
+        padding: 12px 10px;
         height: 85px;
     }
     .checkout-date-item input+label .checkout-date-item__date{
@@ -9164,6 +9243,20 @@ line-height: 22px;
     .section-register-success__btns .btn {
         width: 240px;
         margin-right: 16px;
+    }
+
+    .text-attention{
+        font-size: 10px;
+        line-height: 12px;
+        padding-left: 34px;
+    }
+    .register-form__title {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .section-cart__aside-text{
+        font-size: 12px;
+        line-height: 14px;
     }
 }
 
@@ -9349,24 +9442,13 @@ line-height: 22px;
     .radio-tabs-item+label{
         padding: 18px 28px;
     }
-    .checkout-date-item {
-        width: calc(20% + 1px);
-        &:nth-child(n+6){
-            display: none;
-        }
-    }
-    .checkout-date-item:nth-child(5) input+label{
-        border-radius: 0 25px 25px 0;
-    }
     .checkout-radios-item__content .y-row{
         @include flex-direction(column-reverse);
+        margin-bottom: -20px;
     }
     .checkout-radios-item__content .y-col{
         width: 100%;
         padding-bottom: 20px;
-    }
-    .checkout-radios-item__content .y-row{
-        margin-bottom: -20px;
     }
     .checkout-radios-item__info li{
         margin-bottom: 24px;
@@ -9378,6 +9460,19 @@ line-height: 22px;
     .section-register-success__btns .btn{
         width: 100%;
         margin: 0 0 10px 0;
+    }
+
+    .checkout-date-item input+label{
+        padding: 12px 15px;
+    }
+    .checkout-date{
+        margin: 0 -10px -15px;
+        padding: 0 10px 15px;
+        overflow: auto;
+    }
+    .checkout-date-item{
+        flex: none;
+        width: 85px;
     }
 }
 
@@ -9395,15 +9490,6 @@ line-height: 22px;
         width: 95px;
     }
 
-    .checkout-date-item {
-        width: calc(25% + 1px);
-        &:nth-child(n+5){
-            display: none;
-        }
-    }
-    .checkout-date-item:nth-child(4) input+label{
-        border-radius: 0 25px 25px 0;
-    }
 }
 
 
@@ -9577,6 +9663,10 @@ line-height: 22px;
     }
     .register-profile-card{
         padding: 20px 15px;
+    }
+    .checkout-account-tabs-nav__item{
+        font-size: 13px;
+        margin-right: 10px;
     }
 }
 

@@ -1239,6 +1239,14 @@ $(document).ready(function(){
         }
        return false;
     });
+    
+    $('.checkout-account-tabs-nav__item').on('click', function(event) {  
+        $(this).parents('.checkout-account-tabs').find('.checkout-account-tabs-nav__item').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.checkout-account-tabs').find('.checkout-account-tabs-content').removeClass('active');
+        $(this).parents('.checkout-account-tabs').find('.checkout-account-tabs-content[data-tab="'+$(this).attr('data-tab')+'"]').addClass('active');
+        return false;
+    });
      
     
     
