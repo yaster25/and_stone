@@ -7,7 +7,8 @@
     <title>AND Stone - Регистрация</title>
     <meta name='description' content="" />
     <meta name="keywords" content="" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />    
+    <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/account.css" />
 </head>
 
 <body>
@@ -247,33 +248,37 @@
                             <div class="register-tabs-content active" data-tab="individual">
                                 <div class="form form-main register-form">
                                     <div class="y-row">
-                                        <div class="y-col y-col-6 y-offset-right-6 form-col">
+                                        <div class="y-col y-col-6 form-col">
+                                            <label class="form-label form-label_lg">Фамилия <span class="star">*</span></label>
+                                            <input type="name" name="lastname" class="form-input form-input_lg  form-input_light" placeholder="Фамилия">
+                                        </div>
+                                        <div class="y-col y-col-6 form-col">
                                             <label class="form-label form-label_lg">Имя <span class="star">*</span></label>
                                             <input type="name" name="name" class="form-input form-input_lg  form-input_light" placeholder="Имя">
                                         </div>
-                                        <div class="y-col y-col-6 form-col">
-                                            <label class="form-label form-label_lg">Телефон <span class="star">*</span></label>
-                                            <input type="tel" name="phone" class="form-input form-input_lg  form-input_light input-phone" placeholder="Телефон">
+                                        <div class="y-col y-col-6 y-offset-right-6 form-col">
+                                            <label class="form-label form-label_lg">Отчество</label>
+                                            <input type="name" name="name" class="form-input form-input_lg  form-input_light" placeholder="Отчество">
                                         </div>
                                         <div class="y-col y-col-6 form-col">
-                                            <label class="form-label form-label_lg">Код проверки <span class="star">*</span></label>
-                                            <div class="form-input-block">
-                                                <input type="text" name="phone-code" class="form-input form-input_lg form-input_light" placeholder="Код">
-                                                <a href="#" class="form-input-block__link">Отправить повторно</a>
-                                                <span class="form-input-block__info">* Введите код отправленный вам в смс</span>
-                                            </div>
-                                        </div>
-                                        <div class="y-col y-col-6 form-col">
-                                            <label class="form-label form-label_lg">E-mail</label>
+                                            <label class="form-label form-label_lg">E-mail <span class="star">*</span></label>
                                             <input type="email" name="email" class="form-input form-input_lg  form-input_light" placeholder="E-mail">
                                         </div>
                                         <div class="y-col y-col-6 form-col">
-                                            <label class="form-label form-label_lg">Код проверки <span class="star">*</span></label>
-                                            <div class="form-input-block">
-                                                <input type="text" name="email-code" class="form-input form-input_lg form-input_light" placeholder="Код">
-                                                <a href="#" class="form-input-block__link">Отправить повторно</a>
-                                                <span class="form-input-block__info">* Введите код отправленный вам на e-mail</span>
+                                            <div class="form-email-code">
+                                                <div class="form-email-code__btn">
+                                                    <a href="#" class="btn btn_border-2">Отправить код подтверждения</a>
+                                                </div>
+                                                 <div class="form-email-code__input">
+                                                     <label class="form-label form-label_lg">Код проверки <span class="star">*</span></label>
+                                                        <div class="form-input-block">
+                                                            <input type="text" name="email-code" class="form-input form-input_lg form-input_light" placeholder="Код">
+                                                            <a href="#" class="form-input-block__link">Отправить повторно</a>
+                                                            <span class="form-input-block__info">* Введите код отправленный вам на e-mail</span>
+                                                        </div>
+                                                </div>
                                             </div>
+                                            
                                         </div>                                        
                                     </div>
                                 </div>                                
@@ -309,32 +314,35 @@
                                 <div class="form form-main register-form">
                                     <div class="register-form__title">Контактное лицо</div>
                                     <div class="y-row">
+                                        <div class="y-col y-col-6 form-col">
+                                            <label class="form-label form-label_lg">Фамилия <span class="star">*</span></label>
+                                            <input type="name" name="lastname" class="form-input form-input_lg  form-input_light" placeholder="Фамилия">
+                                        </div>
+                                        <div class="y-col y-col-6 form-col">
+                                            <label class="form-label form-label_lg">Имя <span class="star">*</span></label>
+                                            <input type="name" name="name" class="form-input form-input_lg  form-input_light" placeholder="Имя">
+                                        </div>
                                         <div class="y-col y-col-6 y-offset-right-6 form-col">
-                                            <label class="form-label form-label_lg">ФИО <span class="star">*</span></label>
-                                            <input type="name" name="name" class="form-input form-input_lg  form-input_light" placeholder="ФИО">
+                                            <label class="form-label form-label_lg">Отчество</label>
+                                            <input type="name" name="name" class="form-input form-input_lg  form-input_light" placeholder="Отчество">
                                         </div>
                                         <div class="y-col y-col-6 form-col">
-                                            <label class="form-label form-label_lg">Телефон <span class="star">*</span></label>
-                                            <input type="tel" name="phone" class="form-input form-input_lg  form-input_light input-phone" placeholder="Телефон">
-                                        </div>
-                                        <div class="y-col y-col-6 form-col">
-                                            <label class="form-label form-label_lg">Код проверки <span class="star">*</span></label>
-                                            <div class="form-input-block">
-                                                <input type="text" name="phone-code" class="form-input form-input_lg form-input_light" placeholder="Код">
-                                                <a href="#" class="form-input-block__link">Отправить повторно</a>
-                                                <span class="form-input-block__info">* Введите код отправленный вам в смс</span>
-                                            </div>
-                                        </div>
-                                        <div class="y-col y-col-6 form-col">
-                                            <label class="form-label form-label_lg">E-mail</label>
+                                            <label class="form-label form-label_lg">E-mail <span class="star">*</span></label>
                                             <input type="email" name="email" class="form-input form-input_lg  form-input_light" placeholder="E-mail">
                                         </div>
                                         <div class="y-col y-col-6 form-col">
-                                            <label class="form-label form-label_lg">Код проверки <span class="star">*</span></label>
-                                            <div class="form-input-block">
-                                                <input type="text" name="email-code" class="form-input form-input_lg form-input_light" placeholder="Код">
-                                                <a href="#" class="form-input-block__link">Отправить повторно</a>
-                                                <span class="form-input-block__info">* Введите код отправленный вам на e-mail</span>
+                                            <div class="form-email-code">
+                                                <div class="form-email-code__btn">
+                                                    <a href="#" class="btn btn_border-2">Отправить код подтверждения</a>
+                                                </div>
+                                                 <div class="form-email-code__input">
+                                                     <label class="form-label form-label_lg">Код проверки <span class="star">*</span></label>
+                                                        <div class="form-input-block">
+                                                            <input type="text" name="email-code" class="form-input form-input_lg form-input_light" placeholder="Код">
+                                                            <a href="#" class="form-input-block__link">Отправить повторно</a>
+                                                            <span class="form-input-block__info">* Введите код отправленный вам на e-mail</span>
+                                                        </div>
+                                                </div>
                                             </div>
                                         </div>                                        
                                     </div>
@@ -438,19 +446,19 @@
                                     
 
                                     <div class="register-tabs-content active" data-tab="individual">
-                                        <div class="register-profile-card__name">Ибрагимов Иманбек</div>
+                                        <div class="register-profile-card__name">Не указано</div>
                                         <ul class="register-profile-card__list">
                                             <li>
                                                 <span>Телефон</span>
-                                                <span class="register-profile-card__list-value">+7 (903) 118-12-09</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
                                             </li>
                                             <li>
                                                 <span>E-mail</span>
-                                                <span class="register-profile-card__list-value">Lave1901@bk.ru</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
                                             </li>                                            
                                             <li class="register-profile-card__list-delivery">
                                                 <span>Адрес доставки</span>
-                                                <span class="register-profile-card__list-value">г. Москва, Барклая, д. 8, к. 10, оф. 118</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
                                             </li>
                                             <li>
                                                 <span>Смс-уведомления</span>
@@ -463,32 +471,36 @@
                                         </ul>
                                     </div>
                                     <div class="register-tabs-content" data-tab="legal">
-                                        <div class="register-profile-card__name">ООО “Строй Групп”</div>
+                                        <div class="register-profile-card__name">Не указано</div>
                                         <ul class="register-profile-card__list">
                                             <li>
+                                                <span>Сайт</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
+                                            </li>
+                                            <li>
                                                 <span>ИНН</span>
-                                                <span class="register-profile-card__list-value">7771717716</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
                                             </li>
                                             <li>
                                                 <span>КПП</span>
-                                                <span class="register-profile-card__list-value">73537537</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
                                             </li>
                                             <li>
                                                 <span>Контактное лицо</span>
-                                                <span class="register-profile-card__list-value">Попов Юрий Геннадьевич</span>
+                                                <span class="register-profile-card__list-value">Не указано</span>
                                             </li>
                                             <li>
                                                 <span>Телефон</span>
-                                                <span class="register-profile-card__list-value">+7 (987) 181-82-22</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
                                             </li>
                                             <li>
                                                 <span>E-mail</span>
-                                                <span class="register-profile-card__list-value">info@stroy-grupp.ru</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
                                             </li>                                           
                                             
                                             <li class="register-profile-card__list-delivery">
                                                 <span>Адрес доставки</span>
-                                                <span class="register-profile-card__list-value">г. Москва, Барклая, д. 8, к. 10, оф. 118</span>
+                                                <span class="register-profile-card__list-value">Не указан</span>
                                             </li>
                                             <li>
                                                 <span>Смс-уведомления</span>
@@ -502,7 +514,7 @@
                                         
                                     </div>
                                 </div>
-                                <button class="btn btn_lg">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                                <button class="btn btn_lg" disabled>ЗАРЕГИСТРИРОВАТЬСЯ</button>
                             </div>
                         </div>
                     </div>

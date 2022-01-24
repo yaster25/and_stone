@@ -1,0 +1,685 @@
+
+
+.section-register{
+    @include flexbox;
+    &__content{
+        width: calc(100% - 360px);
+        padding-right: 40PX;
+    }
+    &__aside{
+        width: 360px;
+        
+        .btn{
+            width: 100%;
+        }
+    }
+}
+
+.register-profile-card{
+    background: #FFFFFF;
+    border: 1px solid rgba(255, 122, 0, 0.2);
+    border-radius: 35px;
+    padding: 32px 30px;
+    margin-bottom: 28px;
+    &__title{
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: $color-black;
+        text-align: center;
+    }    
+    &-photo{
+        margin-bottom: 10px;
+        &__link { width: 75px; height: 75px; overflow: hidden; cursor: pointer; 
+            background: #FFFFFF no-repeat center center;
+            background-size: cover;
+            border: 1px solid $color-light-grey;
+            border-radius: 50%;
+            position:relative;
+            transition: $default-transition;
+            color: #E8E8EE;
+            margin: 0 auto;
+            svg{
+                position:absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                stroke:currentColor;
+                width: 24px;
+                height: 24px;
+            }
+            img { width: 100%; height: 100%; object-fit: cover; }
+            
+            &:hover{
+                border-color: $color-orange;
+                color: $color-orange;
+            }
+        }
+       
+        #imageUpload { display: none; }
+    }    
+    &__name{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-black;
+        margin-bottom: 20px;
+        text-align: center;
+    }    
+    &__list{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-light-graphite;
+        li{
+            margin-bottom: 21px;
+            @include flexbox;
+            @include justify-content(space-between);
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &.register-profile-card__list-delivery{
+                display: none;
+                &.active{
+                     @include flexbox;
+                }
+            }
+            span:first-child{
+                white-space: nowrap;
+            }
+            a{
+                color:$color-orange;
+                text-decoration: underline;
+                &:hover{
+                    color: $color-black;
+                }
+            }
+        }
+        
+        &-value{
+            padding-left: 10px;
+            text-align: right;
+            color: $color-black;
+        }
+    }
+    .register-tabs-content{
+        margin-bottom: 0;
+    }
+}
+
+.register-tabs{
+    &-nav{
+        margin-bottom: 30px;
+        &__item{
+            display:inline-block;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            color: #CACAD0;
+            margin-right: 24px;
+            border-bottom: 1px dashed #CACAD0;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:hover{
+                color: $color-orange;
+                border-color: $color-orange;
+            }
+            &.active{
+                font-weight: 900;
+                color: $color-orange;
+                border-bottom: 1px solid $color-orange;
+            }
+        }
+    }
+    &-content{
+        display:none;
+        margin-bottom: 40px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &.active{
+            display: block;
+        }
+    }
+}
+
+.register-form{
+    margin-bottom: 40px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .form-radios{
+        margin-left: 28px;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-light-graphite;
+        margin-bottom: 20px;
+        &-2{
+            font-size: 18px;
+            line-height: 22px;
+            color: $color-graphite;
+            p{
+                color: $color-light-graphite;
+                font-weight: 400;
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+.register-address{
+    margin-top: 20px;
+    &:first-child{
+        margin-top: 0;
+    }
+    &__link{
+        display: inline-block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 26px;
+        color: $color-orange;
+        border-bottom: 1px dashed #CACAD0;
+        &:hover{
+            color: $color-black;
+            border-color: $color-black;
+        }
+        
+        &.active{
+            color: $color-red;
+            &:hover{
+                color: $color-black;
+                border-color: $color-black;
+            }
+        }
+    }
+    &__content{
+        margin-top: 20px;
+        display: none;
+    }
+}
+
+.form-main {
+    .y-col{
+        padding: 0 15px 30px;
+    }
+    .y-row{
+        margin: 0 -15px -30px;
+    }
+}
+
+.section-register-success{
+    &__text{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-light-graphite;
+        margin-bottom: 40px;
+    }
+    &__btns{
+        .btn{
+            width: 300px;
+            margin-right: 36px;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.text-attention{
+    position:relative;
+    padding-left: 42px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-black;
+    padding-top: 3px;
+    min-height: 21px;
+    svg{
+        fill:$color-orange;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+}
+
+.form-email-code{
+    display: none;
+    &__btn{
+        padding-top: 32px;
+        .btn{
+            margin-top: 0;  
+            font-size: 14px;
+            letter-spacing: 0;
+            text-transform: none;
+            font-weight: normal;
+            width: 100%;
+        }
+    }
+    &__input{
+        display: none;
+    }
+}
+
+
+.section-account{
+    @include flexbox;
+    &__aside{
+        width: 360px;
+    }
+    &__content{
+        width: calc(100% - 360px);
+        padding-left: 40px;
+    }    
+}
+
+.account-aside{
+    background: #FFFFFF;
+    border: 1px solid #E8E8EE;
+    border-radius: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+    &-nav{
+        margin-bottom: 120px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &-item{
+            margin-bottom: 15px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &__link{
+                display: block;
+                height: 48px;
+                line-height: 48px;
+                padding: 0 38px;
+                font-size: 18px;
+                color: $color-light-graphite;
+                svg{
+                    display:inline-block;
+                    vertical-align: middle;
+                    width: 24px;
+                    height: 24px;
+                    margin: -3px 18px 0 0;
+                    fill:currentColor;
+                    stroke:currentColor;
+                }
+                &-green{
+                    color: #C8F5E5;
+                }
+                &-orange{
+                    color:$color-orange;
+                }
+                
+                &:hover{
+                    color: $color-orange;
+                }
+                &.active{
+                    font-weight: bold;
+                    color: $color-black;
+                    background: rgba(247, 247, 249, 0.5);
+                }
+                
+                
+                
+            }
+        }
+    }
+}
+
+.account-contact-main{
+    @include flexbox;
+    margin-bottom: 40px;
+    &__left{
+        width: 260px;
+    }
+    &__right{
+        width: calc(100% - 260px);
+        padding-left: 40px;
+        max-width: 450px;
+    }
+    &__photo{
+        width: 260px;
+        height: 290px;
+        margin-bottom: 0;
+        .register-profile-card-photo__link{
+            border: 1px dashed $color-light-graphite;
+            border-radius: 25px;
+            width: 100%;
+            height: 100%;
+            color: $color-light-graphite;
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(center);
+            &:hover{
+                border-color: $color-orange;
+                color: $color-orange;
+            }
+            svg{
+                width:48px;
+                height: 48px;
+                display: block;
+                margin: 0 auto 18px;
+                position: relative;
+            }
+        }
+        
+        &.active{
+            .register-profile-card-photo__link{
+                border-color: transparent;
+                span{
+                    opacity:0;
+                }
+            }
+        }
+        
+    }
+}
+
+.account-contact-form{
+    .y-col{
+        padding-bottom: 24px;
+    }
+}
+
+.account-contact-additional{
+    .title-box{
+        @include justify-content(flex-start);
+    }
+    .edit-link{
+        margin-left: 18px;
+    }
+    &__row{
+        @include flexbox;
+        
+        
+    }
+    &__col{
+        width: 260px;
+        margin-right: 40px;
+        &:last-child{
+            margin-right: 0;
+        }
+        .form-label_lg{
+            margin-bottom: 20px;
+        }
+        .form-text{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+    
+    &__buttons{
+        display: none;
+        margin-top: 40px;
+        .btn{
+            width: 220px;
+            margin-right: 16px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    &__form{
+        max-width: 360px;
+        margin-bottom: 40px;
+    }
+}
+
+.edit-link{
+    width: 24px;
+    height: 24px;          
+            
+    color: $color-black;
+    display: inline-block;
+            &:hover{
+                color: $color-orange;
+            }
+            svg{
+                display:block;
+                width: 100%;
+                height: 100%;
+                stroke:currentColor;
+            }
+}
+
+.account-contact-address{
+    position: relative;
+    
+    &__edit{
+        position: absolute;
+        top: -55px;
+        right: 0;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: $color-black;
+        &:hover{
+            color: $color-orange;
+        }
+        svg{
+            display:inline-block;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+            margin: -3px 18px 0 0;
+            stroke:currentColor;
+        }
+    }
+    &__form{
+        max-width: 360px;
+    }
+    &__buttons{
+        margin-top: 30px;
+        display: none;
+        .btn{
+            width: 220px;
+            margin-right: 16px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+
+// col 0 15px 30px
+// padding inside 30px
+@media screen and (max-width: 1199px) {
+    
+
+    .section-register__content{
+        padding-right: 30px;
+    }
+    .register-form{
+        .y-col-6{
+            width: 100%;
+        }
+        .y-col-3{
+            width: 50%;
+        }
+        .y-offset-right-6{
+            margin-right: 0;
+        }
+    }
+
+    .section-account__aside{
+        width: 300px;
+    }
+    .section-account__content {
+        width: calc(100% - 300px);
+        padding-left: 30px;
+    }
+    .account-contact-main__right {
+        padding-left: 30px;
+        width: calc(100% - 220px);
+    }
+    .account-contact-main__photo, .account-contact-main__left{
+        width: 220px;
+    }
+    .account-contact-additional__col {
+        width: 220px;
+        margin-right: 30px;
+    }
+    .account-aside-nav {
+        margin-bottom: 30px;
+    }
+    .account-aside{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+
+// col  0 10px 20px
+@media screen and (max-width: 991px) {
+   
+   
+    .section-register{
+        @include flex-wrap(wrap);
+        &__content{
+            width: 100%;
+            padding: 0 0 40px 0;
+        }
+        &__aside{
+            width: 100%;
+        }
+    }
+    .register-tabs-nav__item{
+        font-size: 16px;
+    }
+    .register-form{
+        .y-col-6{
+            width: 50%;
+        }
+        .y-col-3{
+            width: 25%;
+        }
+        .y-offset-right-6{
+            margin-right: 50%;
+        }
+    }
+    .register-form .form-radios{
+        margin-left: 0;
+    }
+    .form-main .y-col {
+        padding: 0 10px 20px;
+    }
+    .form-main .y-row {
+        margin: 0 -10px -20px;
+    }
+     .form-input-block__info{
+        position: relative;
+        top: auto;
+    }
+    .section-register-success__text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .register-form__title{
+        font-size: 18px;
+    }
+   
+    
+}
+
+// margin-bottom 40px = 30px
+// fonts as mobile
+
+@media screen and (max-width: 767px) {
+
+    .register-form{
+        .y-col-6{
+            width: 100%;
+        }
+        .y-col-3{
+            width: 50%;
+        }
+        .y-offset-right-6{
+            margin-right: 0;
+        }
+    }
+    .register-tabs-nav__item {
+        font-size: 14px;
+        margin-right: 16px;
+    }
+
+    .register-form__title{
+        font-size: 16px;
+        line-height: 19px;
+    }
+   
+    .register-form{
+        margin-bottom: 30px;
+    }
+    .register-tabs-content{
+        margin-bottom: 30px;
+    }
+
+    .section-register-success__text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    .section-register-success__btns .btn {
+        width: 240px;
+        margin-right: 16px;
+    }
+
+    .text-attention{
+        font-size: 10px;
+        line-height: 12px;
+        padding-left: 34px;
+    }
+    .form-email-code__btn{
+        padding-top: 0;
+    }
+    .register-tabs{
+        &-nav{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+
+    .section-register-success__btns .btn{
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    
+}
+
+@media screen and (max-width: 479px) {
+   
+}
+
+
+@media screen and (max-width: 374px) {
+    
+    .register-tabs-nav__item {
+        font-size: 13px;
+        margin-right: 6px;
+    }
+    .register-profile-card{
+        padding: 20px 15px;
+    }
+
+}
+

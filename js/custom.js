@@ -23,6 +23,11 @@ $(document).ready(function(){
         autoFocus: false
     });
     
+    $('.js-popup-close').click(function(){
+        $.fancybox.close();
+        return false;
+    })
+    
     $('select').selectric({
         disableOnMobile: false,
         nativeOnMobile: true,
@@ -828,10 +833,18 @@ $(document).ready(function(){
             },
             rules: {
                 'phone': "required",               
+                'email': {
+                    "required": true, 
+                    "email":true
+                },               
                 'agree': "required"
             },
             messages: {
                 'phone': "Обязательно заполните телефон",               
+                'email': {
+                     "required": "Обязательно заполните e-mail",
+                     "email": "Введите корректный e-mail",
+                },               
                 'agree': "Обязательное поле"
             },
             submitHandler: function(form){
@@ -1211,14 +1224,15 @@ $(document).ready(function(){
     });
     function fasterPreview( uploader ) {
         if ( uploader.files && uploader.files[0] ){                
-            $('#profileImage').css('background-image', "url('" + window.URL.createObjectURL(uploader.files[0]) + "') ")                 
+            $('#profileImage').css('background-image', "url('" + window.URL.createObjectURL(uploader.files[0]) + "') ")  ;
+            $('.account-contact-main__photo').addClass('active');
         }
     }
     $("#imageUpload").change(function(){
         fasterPreview( this );
     });
     
-     $('.register-tabs-nav__item').on('click', function(event) {  
+ $('.register-tabs-nav__item').on('click', function(event) {  
         $(this).parents('.register-tabs').find('.register-tabs-nav__item').removeClass('active');
         $(this).addClass('active');
         $(this).parents('.register-tabs').find('.register-tabs-content').removeClass('active');
@@ -1248,7 +1262,11 @@ $(document).ready(function(){
         return false;
     });
      
-    
+    $('.form-email-code__btn .btn').on('click', function(event) {  
+        $(this).parents('.form-email-code__btn').hide();
+        $(this).parents('.form-email-code__btn').next('.form-email-code__input').show();
+        return false;
+    });
     
     var ll2 = new LazyLoad({
         elements_selector: ".slick-slide .lazyload",
